@@ -1,0 +1,9 @@
+<map id="Headers/def_struct.h" name="Headers/def_struct.h">
+<area shape="rect" id="node1" title="Contains the definitions of every custom type used in the Kernel module code." alt="" coords="185,5,343,32"/>
+<area shape="rect" id="node2" href="$d8/db1/export__proc__info_8h.html" title="This file containts, macros and functions used to manage the /proc files." alt="" coords="128,80,285,121"/>
+<area shape="rect" id="node4" href="$d9/db6/module__library_8h.html" title="Contains the helper functions called from the UMS device." alt="" coords="238,177,421,203"/>
+<area shape="rect" id="node3" href="$de/d2a/export__proc__info_8c_source.html" title=" " alt="" coords="5,169,163,211"/>
+<area shape="rect" id="node5" href="$d0/d0c/ums_8h.html" title="Contains the functions to interact from user space with the kernel module." alt="" coords="143,259,257,285"/>
+<area shape="rect" id="node7" href="$d4/ddd/module__library_8c_source.html" title=" " alt="" coords="281,259,463,285"/>
+<area shape="rect" id="node6" href="$de/d3c/ums_8c_source.html" title=" " alt="" coords="143,333,257,360"/>
+</map>

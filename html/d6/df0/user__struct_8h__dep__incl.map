@@ -1,0 +1,13 @@
+<map id="Headers/user_struct.h" name="Headers/user_struct.h">
+<area shape="rect" id="node1" title="Contains the definitions of every custom type used in user space." alt="" coords="285,5,449,32"/>
+<area shape="rect" id="node2" href="$d8/d80/def__struct_8h.html" title="Contains the definitions of every custom type used in the Kernel module code." alt="" coords="172,80,329,107"/>
+<area shape="rect" id="node5" href="$d9/db6/module__library_8h.html" title="Contains the helper functions called from the UMS device." alt="" coords="238,251,421,278"/>
+<area shape="rect" id="node9" href="$da/dff/ums__user__library_8h.html" title="This library contains the definitions of every function that can be used from user space to interact ..." alt="" coords="404,80,607,107"/>
+<area shape="rect" id="node3" href="$d8/db1/export__proc__info_8h.html" title="This file containts, macros and functions used to manage the /proc files." alt="" coords="121,155,279,196"/>
+<area shape="rect" id="node4" href="$de/d2a/export__proc__info_8c_source.html" title=" " alt="" coords="5,244,163,285"/>
+<area shape="rect" id="node6" href="$d0/d0c/ums_8h.html" title="Contains the functions to interact from user space with the kernel module." alt="" coords="143,333,257,360"/>
+<area shape="rect" id="node8" href="$d4/ddd/module__library_8c_source.html" title=" " alt="" coords="281,333,463,360"/>
+<area shape="rect" id="node7" href="$de/d3c/ums_8c_source.html" title=" " alt="" coords="143,408,257,435"/>
+<area shape="rect" id="node10" href="$da/d2f/ums__user__library_8c_source.html" title=" " alt="" coords="405,162,606,189"/>
+<area shape="rect" id="node11" href="$d8/db9/test_8c_source.html" title=" " alt="" coords="631,162,689,189"/>
+</map>
