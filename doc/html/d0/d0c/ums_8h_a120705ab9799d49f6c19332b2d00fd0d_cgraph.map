@@ -1,4 +1,0 @@
-<map id="retrive_schduler_thread_proc" name="retrive_schduler_thread_proc">
-<area shape="rect" id="node1" title="retrive the info of a schduler thread and puts it in a buffer" alt="" coords="5,5,216,32"/>
-<area shape="rect" id="node2" href="$d9/db6/module__library_8h.html#a577d611824aaa312e744706fbff8fb1a" title="retrive the infos form the schduler_thread&#39;s struct in a char*" alt="" coords="264,5,483,32"/>
-</map>

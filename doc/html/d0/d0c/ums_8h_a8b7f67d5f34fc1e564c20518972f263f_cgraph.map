@@ -1,4 +1,0 @@
-<map id="retrive_worker_thread_proc" name="retrive_worker_thread_proc">
-<area shape="rect" id="node1" title="retrives the info of a worker thread and puts it in a buffer" alt="" coords="5,5,205,32"/>
-<area shape="rect" id="node2" href="$d9/db6/module__library_8h.html#ac1178af6cb772fa9ee35f21b1e4c6cc7" title="retrive the infos form the worker&#39;s struct in a char*" alt="" coords="253,5,460,32"/>
-</map>

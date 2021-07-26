@@ -1,4 +1,0 @@
-<map id="dequeue_size_request" name="dequeue_size_request">
-<area shape="rect" id="node1" title="This function return the size to be allocated in user space in order to recive the list of ums_worker..." alt="" coords="5,5,172,32"/>
-<area shape="rect" id="node2" href="$d9/db6/module__library_8h.html#a8665b5174c1ba093125561797d0287c2" title="retive the completion list managed by the current scheduler_thread" alt="" coords="220,5,365,32"/>
-</map>
