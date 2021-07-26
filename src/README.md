@@ -10,7 +10,7 @@ The sources are structured in this way:
 * def_struct.h: struct used by the LKM
 * export_porc_info.h/export_porc_info.c: code used by the LKM to manage /proc/ums
 * ums_user_library.h/ums_user_library.c: library to interct with LKM from user space
-* user_struct.h: structs definiton used by ums_user_library.h to exchnage infos with the LKM
+* user_struct.h: structs definiton used by ums_user_library.h to exchnage info with the LKM
 
 
 ## `Module/` cointains the code of the LKM and its library
