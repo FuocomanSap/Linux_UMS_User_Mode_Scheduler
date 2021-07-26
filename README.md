@@ -12,15 +12,19 @@ The author(s) of this project is/are: Daniele De Turris (1919828), Francesco Dou
   * 4)create N pthread
   * 5)from the pthread call the enter_ums_scheduling_mode
 
-for more infos on how to use it look at final_project_track.pdf 
+DOC: https://fuocomansap.github.io/Linux_UMS_User_Mode_Scheduler/
 
-for technical infos look at report report_AOSV.pdf
 
 ### How to test:
 * 1)compile the test.c /src/makefile
 * 2)compile the module /src/Module/makefile
 * 3)run the module (./mount)
 * 4)run the test (./test.c) 
+
+
+for more infos on how to use it look at final_project_track.pdf 
+
+for technical infos look at report report_AOSV.pdf
 
 
 ###Documentation
