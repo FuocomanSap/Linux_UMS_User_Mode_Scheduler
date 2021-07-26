@@ -1,0 +1,13 @@
+digraph "retrive_list"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="retrive_list",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="create_ums_thread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$module__library_8h.html#a85567f1e1b659aec9505998f9be3c846",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ums_dev_ioctls",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ums_8h.html#ae04231a364e701a8767628b1c6e04222",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

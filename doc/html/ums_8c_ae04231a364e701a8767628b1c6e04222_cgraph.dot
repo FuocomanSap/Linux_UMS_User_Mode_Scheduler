@@ -1,0 +1,23 @@
+digraph "ums_dev_ioctls"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ums_dev_ioctls",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="context_switch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$module__library_8c.html#adb205534057842908899c58cb8bd461b",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="create_ums_thread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$module__library_8c.html#a85567f1e1b659aec9505998f9be3c846",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="retrive_list",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$module__library_8c.html#a319410af1cafe2259b74cfbb6ec33a25",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="release_scheduler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$module__library_8c.html#a5c666dde19d483304778c0e7021c0cb0",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="retrive_current_list",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$module__library_8c.html#a8665b5174c1ba093125561797d0287c2",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="retrive_current_scheduler\l_thread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$module__library_8c.html#a19fa8292d88726dc8a30781bc2bef489",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="retrive_worker_thread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$module__library_8c.html#a81594faef69f0ed2b96b5e309e24e96e",tooltip=" "];
+}

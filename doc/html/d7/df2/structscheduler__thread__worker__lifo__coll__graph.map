@@ -1,0 +1,4 @@
+<map id="scheduler_thread_worker_lifo" name="scheduler_thread_worker_lifo">
+<area shape="rect" id="node1" title="Strucute used by a UMS Scheduler thread to save the order of the worker threads called." alt="" coords="5,95,219,121"/>
+<area shape="rect" id="node2" href="$dd/d5b/structworker__thread.html" title="Strucute used by a UMS Scheduler to mantain Worker Thread info, used in ADD_WORKER." alt="" coords="55,5,169,32"/>
+</map>

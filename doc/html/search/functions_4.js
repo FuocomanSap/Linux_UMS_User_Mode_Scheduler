@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['enter_5fums_5fscheduling_5fmode_138',['enter_ums_scheduling_mode',['../da/dff/ums__user__library_8h.html#a1af25d3a8801258480c8d12f142d8b77',1,'enter_ums_scheduling_mode(int fd, int(*entry_point)(void *), void *entrypoint_args, ums_pid_t completion_list_id):&#160;ums_user_library.c'],['../d9/db6/module__library_8h.html#aa493ccabf23895aa9595de97985fe551',1,'enter_ums_scheduling_mode(struct list_head *sched_data, unsigned long int filep, unsigned long arg, struct list_head *comp_lists):&#160;module_library.c']]],
+  ['execute_5fums_5fthread_139',['execute_ums_thread',['../da/dff/ums__user__library_8h.html#a93fb4f479e87b611e5d565aa59342ea9',1,'execute_ums_thread(int fd, ums_pid_t worker_id, completion_list_data *list_data):&#160;ums_user_library.c'],['../d9/db6/module__library_8h.html#a0074254aafc61dad657dc6ea8882b5bb',1,'execute_ums_thread(struct list_head *sched_data, unsigned long int filep, unsigned long arg, struct scheduler_thread_worker_lifo *worker_lifo_aux):&#160;module_library.c']]],
+  ['exit_5ffrom_5fyield_140',['exit_from_yield',['../d9/db6/module__library_8h.html#af7420b2484dedd2009c15bf004889989',1,'module_library.c']]],
+  ['exit_5fworker_5fthread_141',['exit_worker_thread',['../da/dff/ums__user__library_8h.html#a71adff8e748b707700456d9bfd708843',1,'exit_worker_thread(int fd):&#160;ums_user_library.c'],['../d9/db6/module__library_8h.html#ae778924791a5ca668f2d7e9f80892001',1,'exit_worker_thread(struct list_head *sched_data, unsigned long int filep, unsigned long arg):&#160;module_library.c']]]
+];

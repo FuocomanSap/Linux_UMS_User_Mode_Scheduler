@@ -1,0 +1,4 @@
+<map id="execute_ums_thread" name="execute_ums_thread">
+<area shape="rect" id="node1" title="called from a scheduler thread, it executes the passed worker thread by switching the entire context,..." alt="" coords="5,5,163,32"/>
+<area shape="rect" id="node2" href="$da/dff/ums__user__library_8h.html#a71adff8e748b707700456d9bfd708843" title="This function must be called at the end of every worker_thread." alt="" coords="211,5,357,32"/>
+</map>

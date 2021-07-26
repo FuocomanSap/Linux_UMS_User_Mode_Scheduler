@@ -1,0 +1,285 @@
+\doxysection{Headers/export\+\_\+proc\+\_\+info.h File Reference}
+\label{export__proc__info_8h}\index{Headers/export\_proc\_info.h@{Headers/export\_proc\_info.h}}
+
+
+This file containts, macros and functions used to manage the /proc files.  
+
+
+{\ttfamily \#include \char`\"{}def\+\_\+struct.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$linux/proc\+\_\+fs.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Module/ums.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$linux/string.\+h$>$}\newline
+Include dependency graph for export\+\_\+proc\+\_\+info.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d67/export__proc__info_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d94/export__proc__info_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{export__proc__info_8h_a6ed9e2ca76c9c0842c686cb406662ee4}} 
+\#define {\bfseries ums\+\_\+standard\+\_\+path}~\char`\"{}ums\char`\"{}
+\item 
+\mbox{\label{export__proc__info_8h_a8ca1f85da4476209c097d771b97e57f1}} 
+\#define {\bfseries schedulers\+\_\+dir}~\char`\"{}schedulers\char`\"{}
+\item 
+\mbox{\label{export__proc__info_8h_abf07c0a9f9ea5c0024dc71fe73c50f9d}} 
+\#define {\bfseries workers\+\_\+dir}~\char`\"{}workers\char`\"{}
+\item 
+\mbox{\label{export__proc__info_8h_ad569fb0b8ab2434c2e7eadde7001468c}} 
+\#define {\bfseries scheduler\+\_\+info}~\char`\"{}info\char`\"{}
+\item 
+\mbox{\label{export__proc__info_8h_acf8b7183cda8ecd962e28edafec8a8ea}} 
+\#define {\bfseries scheduler\+\_\+standard\+\_\+path}~\char`\"{}ums/\%lu\char`\"{}
+\item 
+\mbox{\label{export__proc__info_8h_ad190f8d5fa29712e38d1a6fdb1590bc3}} 
+\#define {\bfseries scheduler\+\_\+thread\+\_\+standard\+\_\+path}~\char`\"{}ums/\%lu/scheduler/\%lu\char`\"{}
+\item 
+\mbox{\label{export__proc__info_8h_a9069e770c1385195fc387f5cdcf7dc78}} 
+\#define {\bfseries worker\+\_\+standard\+\_\+path}~\char`\"{}ums/\%lu/scheduler/\%lu/workers/\%lu\char`\"{}
+\item 
+\mbox{\label{export__proc__info_8h_a7a85232127bf2e8117f6a6afcfba9358}} 
+\#define {\bfseries P\+A\+T\+H\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+I\+ZE}~1024
+\item 
+\mbox{\label{export__proc__info_8h_aaf7925da8cc52fd9ee4c3505f723942c}} 
+\#define {\bfseries P\+A\+T\+H\+\_\+\+R\+M\+\_\+\+S\+I\+ZE}~2048
+\item 
+\mbox{\label{export__proc__info_8h_a48815ab4d88e61fd129c4da6628b67f2}} 
+\#define {\bfseries R\+E\+T\+R\+I\+V\+E\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}~2048
+\item 
+\mbox{\label{export__proc__info_8h_a61fc173cd03db618eb2f64b60f42b55b}} 
+\#define {\bfseries W\+O\+R\+K\+ER}~1
+\item 
+\mbox{\label{export__proc__info_8h_a1b3f65587b48bff0583fb85181991b01}} 
+\#define {\bfseries S\+C\+H\+E\+D\+U\+L\+ER}~2
+\item 
+\mbox{\label{export__proc__info_8h_a2b06df7d40ad7a2687583c1fb6437284}} 
+\#define {\bfseries S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+T\+H\+R\+E\+AD}~3
+\item 
+\mbox{\label{export__proc__info_8h_aeca034f67218340ecb2261a22c2f3dcd}} 
+\#define {\bfseries B\+U\+F\+S\+I\+ZE}~4096
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ create\+\_\+proc\+\_\+ums} (struct proc\+\_\+dir\+\_\+entry $\ast$$\ast$ent)
+\begin{DoxyCompactList}\small\item\em Create an ums dir in /proc. \end{DoxyCompactList}\item 
+int \textbf{ create\+\_\+proc\+\_\+ums\+\_\+scheduler} (unsigned long filep, struct \textbf{ U\+M\+S\+\_\+sched\+\_\+data} $\ast$scheduler, struct proc\+\_\+dir\+\_\+entry $\ast$father)
+\begin{DoxyCompactList}\small\item\em Create a $<$filep$>$ dir under /proc/ums, and /proc/ums/$<$filep$>$/shedulers, $<$filep$>$ is the identifier of an U\+MS Scheduler. \end{DoxyCompactList}\item 
+int \textbf{ create\+\_\+proc\+\_\+ums\+\_\+scheduler\+\_\+thread} (unsigned long filep, struct \textbf{ scheduler\+\_\+thread} $\ast$sched, struct proc\+\_\+dir\+\_\+entry $\ast$father)
+\begin{DoxyCompactList}\small\item\em Create\+: a $<$pid$>$ dir under /proc/ums/$<$filep$>$/schedulers,file \char`\"{}info\char`\"{} and a \char`\"{}workers\char`\"{} dir under /proc/ums/$<$filep$>$/schedulers/$<$pid$>$. $<$pid$>$ is the identifier of an U\+MS Scheduler thread. \end{DoxyCompactList}\item 
+int \textbf{ create\+\_\+proc\+\_\+worker} (struct \textbf{ worker\+\_\+thread} $\ast$worker, struct \textbf{ scheduler\+\_\+thread} $\ast$sched)
+\begin{DoxyCompactList}\small\item\em Create a $<$pid$>$ file under /proc/ums/$<$filep$>$/schedulers/$<$father\+\_\+pid$>$/workers. \end{DoxyCompactList}\item 
+int \textbf{ rm\+\_\+proc\+\_\+ums} (void)
+\begin{DoxyCompactList}\small\item\em Remove the \char`\"{}ums\char`\"{} dir under /proc. \end{DoxyCompactList}\item 
+int \textbf{ rm\+\_\+proc\+\_\+ums\+\_\+scheduler} (unsigned long filep, struct \textbf{ U\+M\+S\+\_\+sched\+\_\+data} $\ast$scheduler)
+\begin{DoxyCompactList}\small\item\em remove the $<$filep$>$ dir under /proc/ums \end{DoxyCompactList}\item 
+int \textbf{ rm\+\_\+proc\+\_\+ums\+\_\+scheduler\+\_\+thread} (unsigned long filep, struct \textbf{ scheduler\+\_\+thread} $\ast$sched)
+\begin{DoxyCompactList}\small\item\em remove the $<$pid$>$ dir under /proc/ums/$<$filep$>$/schedulers \end{DoxyCompactList}\item 
+int \textbf{ rm\+\_\+proc\+\_\+worker} (struct \textbf{ worker\+\_\+thread} $\ast$worker, struct \textbf{ scheduler\+\_\+thread} $\ast$sched)
+\begin{DoxyCompactList}\small\item\em remove the $<$pid$>$ file under /proc/ums/$<$filep$>$/schedulers/$<$father-\/pid$>$/workers \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file containts, macros and functions used to manage the /proc files. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{export__proc__info_8h_a10ae897aded22a9b3acf44c7bad3fbe1}} 
+\index{export\_proc\_info.h@{export\_proc\_info.h}!create\_proc\_ums@{create\_proc\_ums}}
+\index{create\_proc\_ums@{create\_proc\_ums}!export\_proc\_info.h@{export\_proc\_info.h}}
+\doxysubsubsection{create\_proc\_ums()}
+{\footnotesize\ttfamily int create\+\_\+proc\+\_\+ums (\begin{DoxyParamCaption}\item[{struct proc\+\_\+dir\+\_\+entry $\ast$$\ast$}]{ent }\end{DoxyParamCaption})}
+
+
+
+Create an ums dir in /proc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ent} & double pointer to a proc\+\_\+dir\+\_\+entry that will recive the new pointer to the dir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, -\/1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file export\+\_\+proc\+\_\+info.\+c.
+
+\mbox{\label{export__proc__info_8h_a853bdc7340271a0be241f9ec1388b413}} 
+\index{export\_proc\_info.h@{export\_proc\_info.h}!create\_proc\_ums\_scheduler@{create\_proc\_ums\_scheduler}}
+\index{create\_proc\_ums\_scheduler@{create\_proc\_ums\_scheduler}!export\_proc\_info.h@{export\_proc\_info.h}}
+\doxysubsubsection{create\_proc\_ums\_scheduler()}
+{\footnotesize\ttfamily int create\+\_\+proc\+\_\+ums\+\_\+scheduler (\begin{DoxyParamCaption}\item[{unsigned long}]{filep,  }\item[{struct \textbf{ U\+M\+S\+\_\+sched\+\_\+data} $\ast$}]{scheduler,  }\item[{struct proc\+\_\+dir\+\_\+entry $\ast$}]{father }\end{DoxyParamCaption})}
+
+
+
+Create a $<$filep$>$ dir under /proc/ums, and /proc/ums/$<$filep$>$/shedulers, $<$filep$>$ is the identifier of an U\+MS Scheduler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filep} & id of the U\+MS Scheduler \\
+\hline
+{\em scheduler} & pointer to the U\+M\+S\+\_\+\+Sched\+\_\+data that will recive in the [ent,ent\+\_\+write,father] the proc\+\_\+dir\+\_\+entry pointers. \\
+\hline
+{\em father} & pointer to the father proc\+\_\+dir\+\_\+entry \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file export\+\_\+proc\+\_\+info.\+c.
+
+\mbox{\label{export__proc__info_8h_adfd0a59c679a5dd3a697ab58e77647a3}} 
+\index{export\_proc\_info.h@{export\_proc\_info.h}!create\_proc\_ums\_scheduler\_thread@{create\_proc\_ums\_scheduler\_thread}}
+\index{create\_proc\_ums\_scheduler\_thread@{create\_proc\_ums\_scheduler\_thread}!export\_proc\_info.h@{export\_proc\_info.h}}
+\doxysubsubsection{create\_proc\_ums\_scheduler\_thread()}
+{\footnotesize\ttfamily int create\+\_\+proc\+\_\+ums\+\_\+scheduler\+\_\+thread (\begin{DoxyParamCaption}\item[{unsigned long}]{filep,  }\item[{struct \textbf{ scheduler\+\_\+thread} $\ast$}]{sched,  }\item[{struct proc\+\_\+dir\+\_\+entry $\ast$}]{father }\end{DoxyParamCaption})}
+
+
+
+Create\+: a $<$pid$>$ dir under /proc/ums/$<$filep$>$/schedulers,file \char`\"{}info\char`\"{} and a \char`\"{}workers\char`\"{} dir under /proc/ums/$<$filep$>$/schedulers/$<$pid$>$. $<$pid$>$ is the identifier of an U\+MS Scheduler thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filep} & id of the U\+MS Scheduler \\
+\hline
+{\em sched} & pointer to the \doxyref{scheduler\+\_\+thread}{p.}{d6/df7/structscheduler__thread} that will recive in the [ent,ent\+\_\+write,father] the proc\+\_\+dir\+\_\+entry pointers. \\
+\hline
+{\em father} & pointer to the father proc\+\_\+dir\+\_\+entry \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 140 of file export\+\_\+proc\+\_\+info.\+c.
+
+\mbox{\label{export__proc__info_8h_a5de171716ac0b435e1178ed113acccc5}} 
+\index{export\_proc\_info.h@{export\_proc\_info.h}!create\_proc\_worker@{create\_proc\_worker}}
+\index{create\_proc\_worker@{create\_proc\_worker}!export\_proc\_info.h@{export\_proc\_info.h}}
+\doxysubsubsection{create\_proc\_worker()}
+{\footnotesize\ttfamily int create\+\_\+proc\+\_\+worker (\begin{DoxyParamCaption}\item[{struct \textbf{ worker\+\_\+thread} $\ast$}]{worker,  }\item[{struct \textbf{ scheduler\+\_\+thread} $\ast$}]{sched }\end{DoxyParamCaption})}
+
+
+
+Create a $<$pid$>$ file under /proc/ums/$<$filep$>$/schedulers/$<$father\+\_\+pid$>$/workers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worker} & pointer to a \doxyref{worker\+\_\+thread}{p.}{dd/d5b/structworker__thread} struct to retrive the worker infos \\
+\hline
+{\em sched} & pointer to the scheduler thread who manage this worker \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 168 of file export\+\_\+proc\+\_\+info.\+c.
+
+\mbox{\label{export__proc__info_8h_a921e372d0acf55305537adee05f21b25}} 
+\index{export\_proc\_info.h@{export\_proc\_info.h}!rm\_proc\_ums@{rm\_proc\_ums}}
+\index{rm\_proc\_ums@{rm\_proc\_ums}!export\_proc\_info.h@{export\_proc\_info.h}}
+\doxysubsubsection{rm\_proc\_ums()}
+{\footnotesize\ttfamily int rm\+\_\+proc\+\_\+ums (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Remove the \char`\"{}ums\char`\"{} dir under /proc. 
+
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 183 of file export\+\_\+proc\+\_\+info.\+c.
+
+\mbox{\label{export__proc__info_8h_a327b6f1e05b68eb4f4246fb47a9d2c70}} 
+\index{export\_proc\_info.h@{export\_proc\_info.h}!rm\_proc\_ums\_scheduler@{rm\_proc\_ums\_scheduler}}
+\index{rm\_proc\_ums\_scheduler@{rm\_proc\_ums\_scheduler}!export\_proc\_info.h@{export\_proc\_info.h}}
+\doxysubsubsection{rm\_proc\_ums\_scheduler()}
+{\footnotesize\ttfamily int rm\+\_\+proc\+\_\+ums\+\_\+scheduler (\begin{DoxyParamCaption}\item[{unsigned long}]{filep,  }\item[{struct \textbf{ U\+M\+S\+\_\+sched\+\_\+data} $\ast$}]{scheduler }\end{DoxyParamCaption})}
+
+
+
+remove the $<$filep$>$ dir under /proc/ums 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filep} & id of the U\+MS Scheduler \\
+\hline
+{\em scheduler} & pointer to the U\+MS Scheduler \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 188 of file export\+\_\+proc\+\_\+info.\+c.
+
+\mbox{\label{export__proc__info_8h_ab249808a763b6aaff828cfd6f79ad9e7}} 
+\index{export\_proc\_info.h@{export\_proc\_info.h}!rm\_proc\_ums\_scheduler\_thread@{rm\_proc\_ums\_scheduler\_thread}}
+\index{rm\_proc\_ums\_scheduler\_thread@{rm\_proc\_ums\_scheduler\_thread}!export\_proc\_info.h@{export\_proc\_info.h}}
+\doxysubsubsection{rm\_proc\_ums\_scheduler\_thread()}
+{\footnotesize\ttfamily int rm\+\_\+proc\+\_\+ums\+\_\+scheduler\+\_\+thread (\begin{DoxyParamCaption}\item[{unsigned long}]{filep,  }\item[{struct \textbf{ scheduler\+\_\+thread} $\ast$}]{sched }\end{DoxyParamCaption})}
+
+
+
+remove the $<$pid$>$ dir under /proc/ums/$<$filep$>$/schedulers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filep} & id of the U\+MS Scheduler who manage this Ums scheduler thread \\
+\hline
+{\em sched} & pointer to the U\+MS scheduler thread \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 201 of file export\+\_\+proc\+\_\+info.\+c.
+
+\mbox{\label{export__proc__info_8h_a82e5d226d113a0608aaaf7d044fe2254}} 
+\index{export\_proc\_info.h@{export\_proc\_info.h}!rm\_proc\_worker@{rm\_proc\_worker}}
+\index{rm\_proc\_worker@{rm\_proc\_worker}!export\_proc\_info.h@{export\_proc\_info.h}}
+\doxysubsubsection{rm\_proc\_worker()}
+{\footnotesize\ttfamily int rm\+\_\+proc\+\_\+worker (\begin{DoxyParamCaption}\item[{struct \textbf{ worker\+\_\+thread} $\ast$}]{worker,  }\item[{struct \textbf{ scheduler\+\_\+thread} $\ast$}]{sched }\end{DoxyParamCaption})}
+
+
+
+remove the $<$pid$>$ file under /proc/ums/$<$filep$>$/schedulers/$<$father-\/pid$>$/workers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worker} & pointer to the desired worker to eliminate \\
+\hline
+{\em sched} & pointer to the U\+MS scheduler thread who manage this worker \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 213 of file export\+\_\+proc\+\_\+info.\+c.
+

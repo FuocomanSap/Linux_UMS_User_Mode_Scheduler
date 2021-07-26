@@ -1,0 +1,634 @@
+\doxysection{Module/module\+\_\+library.h File Reference}
+\label{module__library_8h}\index{Module/module\_library.h@{Module/module\_library.h}}
+
+
+Contains the helper functions called from the U\+MS device.  
+
+
+{\ttfamily \#include $<$linux/sched.\+h$>$}\newline
+{\ttfamily \#include $<$linux/uaccess.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Headers/def\+\_\+struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Headers/\+Common.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$linux/signal.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Headers/user\+\_\+struct.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$linux/sched/signal.\+h$>$}\newline
+{\ttfamily \#include $<$linux/delay.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Headers/export\+\_\+proc\+\_\+info.\+h\char`\"{}}\newline
+Include dependency graph for module\+\_\+library.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/ddb/module__library_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/dcd/module__library_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ create\+\_\+ums\+\_\+thread} (struct list\+\_\+head $\ast$sched\+\_\+data, unsigned long int filep, int($\ast$entry\+\_\+point)(void $\ast$), void $\ast$\textbf{ args}, struct list\+\_\+head $\ast$comp\+\_\+lists, ums\+\_\+pid\+\_\+t \+\_\+completion\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Create a new \doxyref{scheduler\+\_\+thread}{p.}{d6/df7/structscheduler__thread} struct, by relating entry\+\_\+point and \+\_\+completion\+\_\+list. \end{DoxyCompactList}\item 
+struct \textbf{ completion\+\_\+list} $\ast$ \textbf{ retrive\+\_\+current\+\_\+list} (struct list\+\_\+head $\ast$sched\+\_\+data, unsigned long int filep)
+\begin{DoxyCompactList}\small\item\em retive the completion list managed by the current \doxyref{scheduler\+\_\+thread}{p.}{d6/df7/structscheduler__thread} \end{DoxyCompactList}\item 
+struct \textbf{ scheduler\+\_\+thread} $\ast$ \textbf{ retrive\+\_\+current\+\_\+scheduler\+\_\+thread} (struct list\+\_\+head $\ast$sched\+\_\+data, unsigned long int filep)
+\begin{DoxyCompactList}\small\item\em Retrive the current \doxyref{scheduler\+\_\+thread}{p.}{d6/df7/structscheduler__thread} structure. \end{DoxyCompactList}\item 
+int \textbf{ release\+\_\+scheduler} (struct list\+\_\+head $\ast$sched\+\_\+data, unsigned long int filep)
+\begin{DoxyCompactList}\small\item\em release the current U\+MS Scheduler and the relative compeltion\+\_\+lists(if possibile) and scheduler\+\_\+threads, if the schedulers are currently executing a worker this function returs -\/5; \end{DoxyCompactList}\item 
+struct \textbf{ completion\+\_\+list} $\ast$ \textbf{ retrive\+\_\+list} (struct list\+\_\+head $\ast$comp\+\_\+lists, ums\+\_\+pid\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Retrive the desired \doxyref{completion\+\_\+list}{p.}{d0/dea/structcompletion__list}. \end{DoxyCompactList}\item 
+struct \textbf{ worker\+\_\+thread} $\ast$ \textbf{ retrive\+\_\+worker\+\_\+thread} (struct \textbf{ completion\+\_\+list} $\ast$current\+\_\+list, ums\+\_\+pid\+\_\+t pid)
+\begin{DoxyCompactList}\small\item\em retrive the desired \doxyref{worker\+\_\+thread}{p.}{dd/d5b/structworker__thread} \end{DoxyCompactList}\item 
+int \textbf{ list\+\_\+copy\+\_\+to\+\_\+user} (struct \textbf{ completion\+\_\+list\+\_\+data} $\ast$to\+\_\+write, struct \textbf{ completion\+\_\+list} $\ast$from\+\_\+read)
+\begin{DoxyCompactList}\small\item\em Create a copy of the current completion list for the user. \end{DoxyCompactList}\item 
+int \textbf{ del\+\_\+worker\+\_\+thread} (struct list\+\_\+head worker\+\_\+list, struct \textbf{ worker\+\_\+thread} $\ast$worker\+\_\+to\+\_\+del)
+\begin{DoxyCompactList}\small\item\em free the desired worker \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ \+\_\+retrive\+\_\+worker\+\_\+thread\+\_\+proc} (time64\+\_\+t pid, struct list\+\_\+head $\ast$comp\+\_\+lists)
+\begin{DoxyCompactList}\small\item\em retrive the infos form the worker\textquotesingle{}s struct in a char$\ast$ \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ \+\_\+retrive\+\_\+schduler\+\_\+thread\+\_\+proc} (time64\+\_\+t pid, struct list\+\_\+head $\ast$sched\+\_\+data)
+\begin{DoxyCompactList}\small\item\em retrive the infos form the schduler\+\_\+thread\textquotesingle{}s struct in a char$\ast$ \end{DoxyCompactList}\item 
+int \textbf{ destoy\+\_\+comp\+\_\+list\+\_\+set\+\_\+destroy} (unsigned long arg, struct list\+\_\+head $\ast$comp\+\_\+lists)
+\begin{DoxyCompactList}\small\item\em Destroy the choosen comp list with id\+:completion\+\_\+list\+\_\+id. \end{DoxyCompactList}\item 
+int \textbf{ add\+\_\+worker} (unsigned long arg, ums\+\_\+pid\+\_\+t worker\+\_\+counter, struct list\+\_\+head $\ast$comp\+\_\+lists)
+\begin{DoxyCompactList}\small\item\em This function generate a new \doxyref{worker\+\_\+thread}{p.}{dd/d5b/structworker__thread} form \doxyref{ums\+\_\+worker\+\_\+thread\+\_\+data}{p.}{d2/d14/structums__worker__thread__data} and then add it to the desired \doxyref{completion\+\_\+list}{p.}{d0/dea/structcompletion__list}. \end{DoxyCompactList}\item 
+int \textbf{ exit\+\_\+worker\+\_\+thread} (struct list\+\_\+head $\ast$sched\+\_\+data, unsigned long int filep, unsigned long arg)
+\begin{DoxyCompactList}\small\item\em This functions delete the worker and pass to the user new entry\+\_\+point function. \end{DoxyCompactList}\item 
+int \textbf{ exit\+\_\+from\+\_\+yield} (struct list\+\_\+head $\ast$sched\+\_\+data, unsigned long int filep)
+\begin{DoxyCompactList}\small\item\em This function update the running time of thw worker and decrement the nesting variable. \end{DoxyCompactList}\item 
+int \textbf{ ums\+\_\+thread\+\_\+yield} (struct list\+\_\+head $\ast$sched\+\_\+data, unsigned long int filep, unsigned long arg)
+\begin{DoxyCompactList}\small\item\em Pause the execution of the current worker and write in (sched\+\_\+thread\+\_\+data$\ast$)arg entry\+\_\+point and args. \end{DoxyCompactList}\item 
+int \textbf{ \+\_\+execute\+\_\+ums\+\_\+thread} (struct list\+\_\+head $\ast$sched\+\_\+data, unsigned long int filep, unsigned long arg, struct \textbf{ scheduler\+\_\+thread} $\ast$cur\+\_\+scheduler, struct \textbf{ scheduler\+\_\+thread\+\_\+worker\+\_\+lifo} $\ast$worker\+\_\+lifo\+\_\+aux)
+\begin{DoxyCompactList}\small\item\em Retrive from the user te id of the worker to execute, if found save the worker in the U\+MS S\+Cheduler thread list of worker and pass to the user the work and args. \end{DoxyCompactList}\item 
+int \textbf{ execute\+\_\+ums\+\_\+thread} (struct list\+\_\+head $\ast$sched\+\_\+data, unsigned long int filep, unsigned long arg, struct \textbf{ scheduler\+\_\+thread\+\_\+worker\+\_\+lifo} $\ast$worker\+\_\+lifo\+\_\+aux)
+\begin{DoxyCompactList}\small\item\em this functions is a wrapper for \+\_\+execute\+\_\+ums\+\_\+thread, to manage the data statistics \end{DoxyCompactList}\item 
+int \textbf{ dequeue\+\_\+size\+\_\+request} (struct list\+\_\+head $\ast$sched\+\_\+data, unsigned long int filep, unsigned long arg)
+\begin{DoxyCompactList}\small\item\em This function return the size to be allocated in user space in order to recive the list of \doxyref{ums\+\_\+worker\+\_\+thread\+\_\+data(user space struct)}{p.}{d2/d14/structums__worker__thread__data} \end{DoxyCompactList}\item 
+int \textbf{ enter\+\_\+ums\+\_\+scheduling\+\_\+mode} (struct list\+\_\+head $\ast$sched\+\_\+data, unsigned long int filep, unsigned long arg, struct list\+\_\+head $\ast$comp\+\_\+lists)
+\begin{DoxyCompactList}\small\item\em This function converts a standard pthread in a U\+MS Scheduler thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the helper functions called from the U\+MS device. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{module__library_8h_ad9e7272ef45b0ea383870e7cf418635e}} 
+\index{module\_library.h@{module\_library.h}!\_execute\_ums\_thread@{\_execute\_ums\_thread}}
+\index{\_execute\_ums\_thread@{\_execute\_ums\_thread}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{\_execute\_ums\_thread()}
+{\footnotesize\ttfamily int \+\_\+execute\+\_\+ums\+\_\+thread (\begin{DoxyParamCaption}\item[{struct list\+\_\+head $\ast$}]{sched\+\_\+data,  }\item[{unsigned long int}]{filep,  }\item[{unsigned long}]{arg,  }\item[{struct \textbf{ scheduler\+\_\+thread} $\ast$}]{cur\+\_\+scheduler,  }\item[{struct \textbf{ scheduler\+\_\+thread\+\_\+worker\+\_\+lifo} $\ast$}]{worker\+\_\+lifo\+\_\+aux }\end{DoxyParamCaption})}
+
+
+
+Retrive from the user te id of the worker to execute, if found save the worker in the U\+MS S\+Cheduler thread list of worker and pass to the user the work and args. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+data} & pointer to a U\+MS Scheduler list\+\_\+head who manage this scheduler thread \\
+\hline
+{\em filep} & id of the U\+MS Scheduler \\
+\hline
+{\em arg} & pointer to a user space sched\+\_\+thread\+\_\+data$\ast$ passed with the id of the choosed woker, than will be filled with entry\+\_\+point and $\ast$args \\
+\hline
+{\em worker\+\_\+lifo\+\_\+aux} & structure that will contain the choosed wroker to be added to the U\+MS S\+Cheduler thread \\
+\hline
+{\em cur\+\_\+scheduler} & pointer to the current U\+MS Scheduler thread \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise. err\+:
+\begin{DoxyItemize}
+\item -\/E\+F\+B\+IG, no more space in kernel to allow a new \doxyref{scheduler\+\_\+thread\+\_\+worker\+\_\+lifo}{p.}{de/d09/structscheduler__thread__worker__lifo}
+\item -\/E\+B\+A\+DF, worker not found
+\item -\/E\+A\+C\+C\+ES, the worker is not R\+U\+N\+N\+A\+B\+LE with one of this errno the default operation is to try to execute the next worker; 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line 939 of file module\+\_\+library.\+c.
+
+\mbox{\label{module__library_8h_a577d611824aaa312e744706fbff8fb1a}} 
+\index{module\_library.h@{module\_library.h}!\_retrive\_schduler\_thread\_proc@{\_retrive\_schduler\_thread\_proc}}
+\index{\_retrive\_schduler\_thread\_proc@{\_retrive\_schduler\_thread\_proc}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{\_retrive\_schduler\_thread\_proc()}
+{\footnotesize\ttfamily char$\ast$ \+\_\+retrive\+\_\+schduler\+\_\+thread\+\_\+proc (\begin{DoxyParamCaption}\item[{time64\+\_\+t}]{pid,  }\item[{struct list\+\_\+head $\ast$}]{sched\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+retrive the infos form the schduler\+\_\+thread\textquotesingle{}s struct in a char$\ast$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & the selected schduler\+\_\+thread id \\
+\hline
+{\em sched\+\_\+data} & pointer to a U\+MS Scheduler list\+\_\+head where the scheduler thread is stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ !=N\+U\+LL on success, N\+U\+LL otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 567 of file module\+\_\+library.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/db6/module__library_8h_a577d611824aaa312e744706fbff8fb1a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{module__library_8h_ac1178af6cb772fa9ee35f21b1e4c6cc7}} 
+\index{module\_library.h@{module\_library.h}!\_retrive\_worker\_thread\_proc@{\_retrive\_worker\_thread\_proc}}
+\index{\_retrive\_worker\_thread\_proc@{\_retrive\_worker\_thread\_proc}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{\_retrive\_worker\_thread\_proc()}
+{\footnotesize\ttfamily char$\ast$ \+\_\+retrive\+\_\+worker\+\_\+thread\+\_\+proc (\begin{DoxyParamCaption}\item[{time64\+\_\+t}]{pid,  }\item[{struct list\+\_\+head $\ast$}]{comp\+\_\+lists }\end{DoxyParamCaption})}
+
+
+
+retrive the infos form the worker\textquotesingle{}s struct in a char$\ast$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid} & the selected worker id \\
+\hline
+{\em comp\+\_\+lists} & pointer to a Completion list list\+\_\+head where the worker is stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char$\ast$ !=N\+U\+LL on success, N\+U\+LL otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 606 of file module\+\_\+library.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/db6/module__library_8h_ac1178af6cb772fa9ee35f21b1e4c6cc7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{module__library_8h_addb91ef0730259e606dd7658336762ce}} 
+\index{module\_library.h@{module\_library.h}!add\_worker@{add\_worker}}
+\index{add\_worker@{add\_worker}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{add\_worker()}
+{\footnotesize\ttfamily int add\+\_\+worker (\begin{DoxyParamCaption}\item[{unsigned long}]{arg,  }\item[{ums\+\_\+pid\+\_\+t}]{worker\+\_\+counter,  }\item[{struct list\+\_\+head $\ast$}]{comp\+\_\+lists }\end{DoxyParamCaption})}
+
+
+
+This function generate a new \doxyref{worker\+\_\+thread}{p.}{dd/d5b/structworker__thread} form \doxyref{ums\+\_\+worker\+\_\+thread\+\_\+data}{p.}{d2/d14/structums__worker__thread__data} and then add it to the desired \doxyref{completion\+\_\+list}{p.}{d0/dea/structcompletion__list}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & pointer to a user space \doxyref{ums\+\_\+worker\+\_\+thread\+\_\+data}{p.}{d2/d14/structums__worker__thread__data} $\ast$ that contains the new woker infos \\
+\hline
+{\em worker\+\_\+to\+\_\+add} & worker passed from user space \\
+\hline
+{\em new\+\_\+worker\+\_\+thread} & struct allocated from the kernel to be filled \\
+\hline
+{\em worker\+\_\+counter} & monotonic counter of the worker \\
+\hline
+{\em comp\+\_\+lists} & pointer to the \doxyref{completion\+\_\+list}{p.}{d0/dea/structcompletion__list} list\+\_\+head who manage the choosen \doxyref{completion\+\_\+list}{p.}{d0/dea/structcompletion__list} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on succees, err otherwise,if err=E\+A\+C\+C\+ES the completion list is marked to be destroyied. 
+\end{DoxyReturn}
+
+
+Definition at line 697 of file module\+\_\+library.\+c.
+
+\mbox{\label{module__library_8h_a7652b9801807f89d5b49db3966f894d7}} 
+\index{module\_library.h@{module\_library.h}!create\_ums\_thread@{create\_ums\_thread}}
+\index{create\_ums\_thread@{create\_ums\_thread}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{create\_ums\_thread()}
+{\footnotesize\ttfamily int create\+\_\+ums\+\_\+thread (\begin{DoxyParamCaption}\item[{struct list\+\_\+head $\ast$}]{sched\+\_\+data,  }\item[{unsigned long int}]{filep,  }\item[{int($\ast$)(void $\ast$)}]{entry\+\_\+point,  }\item[{void $\ast$}]{args,  }\item[{struct list\+\_\+head $\ast$}]{comp\+\_\+lists,  }\item[{ums\+\_\+pid\+\_\+t}]{\+\_\+completion\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Create a new \doxyref{scheduler\+\_\+thread}{p.}{d6/df7/structscheduler__thread} struct, by relating entry\+\_\+point and \+\_\+completion\+\_\+list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+data} & pointer to the U\+MS Scheduler global variable that manage all the U\+MS Scheduler \\
+\hline
+{\em filep} & identifier of the file descriptoy ~\newline
+ \\
+\hline
+{\em entry\+\_\+point} & scheduling function \\
+\hline
+{\em args} & pointer to the args to pass to the entry\+\_\+point function \\
+\hline
+{\em comp\+\_\+lists} & pointer to the U\+MS Scheduler global variable that manage all the completion lists \\
+\hline
+{\em \+\_\+completion\+\_\+list} & identifier of the completion list to relate to this scheduler thread \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success err otherwise for the possible err values, they are same of the relative ioctl 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file module\+\_\+library.\+c.
+
+\mbox{\label{module__library_8h_a24006e4423234fb2d3dea9d3996cb83d}} 
+\index{module\_library.h@{module\_library.h}!del\_worker\_thread@{del\_worker\_thread}}
+\index{del\_worker\_thread@{del\_worker\_thread}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{del\_worker\_thread()}
+{\footnotesize\ttfamily int del\+\_\+worker\+\_\+thread (\begin{DoxyParamCaption}\item[{struct list\+\_\+head}]{worker\+\_\+list,  }\item[{struct \textbf{ worker\+\_\+thread} $\ast$}]{worker\+\_\+to\+\_\+del }\end{DoxyParamCaption})}
+
+
+
+free the desired worker 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worker\+\_\+list} & the list\+\_\+head who own this worker \\
+\hline
+{\em worker\+\_\+to\+\_\+del} & pointer to the worker to del \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, -\/1 otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 536 of file module\+\_\+library.\+c.
+
+\mbox{\label{module__library_8h_a150c26db6cdd59ffdb857c81cd6ba3c8}} 
+\index{module\_library.h@{module\_library.h}!dequeue\_size\_request@{dequeue\_size\_request}}
+\index{dequeue\_size\_request@{dequeue\_size\_request}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{dequeue\_size\_request()}
+{\footnotesize\ttfamily int dequeue\+\_\+size\+\_\+request (\begin{DoxyParamCaption}\item[{struct list\+\_\+head $\ast$}]{sched\+\_\+data,  }\item[{unsigned long int}]{filep,  }\item[{unsigned long}]{arg }\end{DoxyParamCaption})}
+
+
+
+This function return the size to be allocated in user space in order to recive the list of \doxyref{ums\+\_\+worker\+\_\+thread\+\_\+data(user space struct)}{p.}{d2/d14/structums__worker__thread__data} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+data} & pointer to a U\+MS Scheduler list\+\_\+head who manage this scheduler thread \\
+\hline
+{\em filep} & id of the U\+MS Scheduler \\
+\hline
+{\em arg} & pointer to a user space completion\+\_\+list\+\_\+data$\ast$ used to set the requeste\+\_\+size var \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 1081 of file module\+\_\+library.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/db6/module__library_8h_a150c26db6cdd59ffdb857c81cd6ba3c8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{module__library_8h_a80c3e547fa5481a21a85990d30873a3a}} 
+\index{module\_library.h@{module\_library.h}!destoy\_comp\_list\_set\_destroy@{destoy\_comp\_list\_set\_destroy}}
+\index{destoy\_comp\_list\_set\_destroy@{destoy\_comp\_list\_set\_destroy}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{destoy\_comp\_list\_set\_destroy()}
+{\footnotesize\ttfamily int destoy\+\_\+comp\+\_\+list\+\_\+set\+\_\+destroy (\begin{DoxyParamCaption}\item[{unsigned long}]{arg,  }\item[{struct list\+\_\+head $\ast$}]{comp\+\_\+lists }\end{DoxyParamCaption})}
+
+
+
+Destroy the choosen comp list with id\+:completion\+\_\+list\+\_\+id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & pointer to teh completion\+\_\+list\+\_\+data$\ast$ that contains the info of the choosed completion list \\
+\hline
+{\em comp\+\_\+lists} & pointer to the list\+\_\+head who own all the \doxyref{completion\+\_\+list}{p.}{d0/dea/structcompletion__list} for this U\+MS Scheduler \\
+\hline
+{\em completion\+\_\+list\+\_\+id} & the id of the completion list to destroy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise, if err=E\+N\+O\+M\+EM no more space in the kernel 
+\end{DoxyReturn}
+
+
+Definition at line 668 of file module\+\_\+library.\+c.
+
+\mbox{\label{module__library_8h_aa493ccabf23895aa9595de97985fe551}} 
+\index{module\_library.h@{module\_library.h}!enter\_ums\_scheduling\_mode@{enter\_ums\_scheduling\_mode}}
+\index{enter\_ums\_scheduling\_mode@{enter\_ums\_scheduling\_mode}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{enter\_ums\_scheduling\_mode()}
+{\footnotesize\ttfamily int enter\+\_\+ums\+\_\+scheduling\+\_\+mode (\begin{DoxyParamCaption}\item[{struct list\+\_\+head $\ast$}]{sched\+\_\+data,  }\item[{unsigned long int}]{filep,  }\item[{unsigned long}]{arg,  }\item[{struct list\+\_\+head $\ast$}]{comp\+\_\+lists }\end{DoxyParamCaption})}
+
+
+
+This function converts a standard pthread in a U\+MS Scheduler thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+data} & pointer to a U\+MS Scheduler list\+\_\+head who manage this scheduler thread \\
+\hline
+{\em filep} & id of the U\+MS Scheduler \\
+\hline
+{\em arg} & pointer to a user space sched\+\_\+thread\+\_\+data$\ast$ used to read the information needed to convert a pthread into a U\+MS Scheduler threads \\
+\hline
+{\em comp\+\_\+lists} & pointer to the \doxyref{completion\+\_\+list}{p.}{d0/dea/structcompletion__list} list\+\_\+head who manage the choosen \doxyref{completion\+\_\+list}{p.}{d0/dea/structcompletion__list} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, err otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 1122 of file module\+\_\+library.\+c.
+
+\mbox{\label{module__library_8h_a0074254aafc61dad657dc6ea8882b5bb}} 
+\index{module\_library.h@{module\_library.h}!execute\_ums\_thread@{execute\_ums\_thread}}
+\index{execute\_ums\_thread@{execute\_ums\_thread}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{execute\_ums\_thread()}
+{\footnotesize\ttfamily int execute\+\_\+ums\+\_\+thread (\begin{DoxyParamCaption}\item[{struct list\+\_\+head $\ast$}]{sched\+\_\+data,  }\item[{unsigned long int}]{filep,  }\item[{unsigned long}]{arg,  }\item[{struct \textbf{ scheduler\+\_\+thread\+\_\+worker\+\_\+lifo} $\ast$}]{worker\+\_\+lifo\+\_\+aux }\end{DoxyParamCaption})}
+
+
+
+this functions is a wrapper for \+\_\+execute\+\_\+ums\+\_\+thread, to manage the data statistics 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+data} & pointer to a U\+MS Scheduler list\+\_\+head who manage this scheduler thread \\
+\hline
+{\em filep} & id of the U\+MS Scheduler \\
+\hline
+{\em arg} & pointer to a user space sched\+\_\+thread\+\_\+data$\ast$ passed with the id of the choosed woker, than will be filled with entry\+\_\+point and $\ast$args \\
+\hline
+{\em worker\+\_\+lifo\+\_\+aux} & structure that will contain the choosed wroker to be added to the U\+MS S\+Cheduler thread \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise. err\+:
+\begin{DoxyItemize}
+\item -\/E\+F\+B\+IG, no more space in kernel to allow a new \doxyref{scheduler\+\_\+thread\+\_\+worker\+\_\+lifo}{p.}{de/d09/structscheduler__thread__worker__lifo}
+\item -\/E\+B\+A\+DF, worker not found
+\item -\/E\+A\+C\+C\+ES, the worker is not R\+U\+N\+N\+A\+B\+LE with one of this errno the default operation is to try to execute the next worker; 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line 1024 of file module\+\_\+library.\+c.
+
+\mbox{\label{module__library_8h_af7420b2484dedd2009c15bf004889989}} 
+\index{module\_library.h@{module\_library.h}!exit\_from\_yield@{exit\_from\_yield}}
+\index{exit\_from\_yield@{exit\_from\_yield}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{exit\_from\_yield()}
+{\footnotesize\ttfamily int exit\+\_\+from\+\_\+yield (\begin{DoxyParamCaption}\item[{struct list\+\_\+head $\ast$}]{sched\+\_\+data,  }\item[{unsigned long int}]{filep }\end{DoxyParamCaption})}
+
+
+
+This function update the running time of thw worker and decrement the nesting variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+data} & pointer to a U\+MS Scheduler list\+\_\+head who manage this scheduler thread \\
+\hline
+{\em filep} & id of the U\+MS Scheduler \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 863 of file module\+\_\+library.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/db6/module__library_8h_af7420b2484dedd2009c15bf004889989_cgraph}
+\end{center}
+\end{figure}
+\mbox{\label{module__library_8h_ae778924791a5ca668f2d7e9f80892001}} 
+\index{module\_library.h@{module\_library.h}!exit\_worker\_thread@{exit\_worker\_thread}}
+\index{exit\_worker\_thread@{exit\_worker\_thread}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{exit\_worker\_thread()}
+{\footnotesize\ttfamily int exit\+\_\+worker\+\_\+thread (\begin{DoxyParamCaption}\item[{struct list\+\_\+head $\ast$}]{sched\+\_\+data,  }\item[{unsigned long int}]{filep,  }\item[{unsigned long}]{arg }\end{DoxyParamCaption})}
+
+
+
+This functions delete the worker and pass to the user new entry\+\_\+point function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+data} & pointer to a U\+MS Scheduler list\+\_\+head who manage this scheduler thread \\
+\hline
+{\em filep} & id of the U\+MS Scheduler \\
+\hline
+{\em arg} & pointer passed fro user space \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise, if err=-\/E\+B\+U\+SY \+:no other worker to execute 
+\end{DoxyReturn}
+
+
+Definition at line 761 of file module\+\_\+library.\+c.
+
+\mbox{\label{module__library_8h_a5d5dbb377d2b4f875aa689a5278558ac}} 
+\index{module\_library.h@{module\_library.h}!list\_copy\_to\_user@{list\_copy\_to\_user}}
+\index{list\_copy\_to\_user@{list\_copy\_to\_user}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{list\_copy\_to\_user()}
+{\footnotesize\ttfamily int list\+\_\+copy\+\_\+to\+\_\+user (\begin{DoxyParamCaption}\item[{struct \textbf{ completion\+\_\+list\+\_\+data} $\ast$}]{to\+\_\+write,  }\item[{struct \textbf{ completion\+\_\+list} $\ast$}]{from\+\_\+read }\end{DoxyParamCaption})}
+
+
+
+Create a copy of the current completion list for the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+\_\+write} & pointer to a \doxyref{completion\+\_\+list\+\_\+data}{p.}{dd/d32/structcompletion__list__data} struct, given by the user \\
+\hline
+{\em from\+\_\+read} & pointer to a \doxyref{completion\+\_\+list}{p.}{d0/dea/structcompletion__list} struct, given by the kernel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, err otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 443 of file module\+\_\+library.\+c.
+
+\mbox{\label{module__library_8h_a5c666dde19d483304778c0e7021c0cb0}} 
+\index{module\_library.h@{module\_library.h}!release\_scheduler@{release\_scheduler}}
+\index{release\_scheduler@{release\_scheduler}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{release\_scheduler()}
+{\footnotesize\ttfamily int release\+\_\+scheduler (\begin{DoxyParamCaption}\item[{struct list\+\_\+head $\ast$}]{sched\+\_\+data,  }\item[{unsigned long int}]{filep }\end{DoxyParamCaption})}
+
+
+
+release the current U\+MS Scheduler and the relative compeltion\+\_\+lists(if possibile) and scheduler\+\_\+threads, if the schedulers are currently executing a worker this function returs -\/5; 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+data} & pointer to the U\+MS Scheduler global variable that manage all the U\+MS Scheduler \\
+\hline
+{\em filep} & identifier of the file descriptoy ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success err otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 291 of file module\+\_\+library.\+c.
+
+\mbox{\label{module__library_8h_a8665b5174c1ba093125561797d0287c2}} 
+\index{module\_library.h@{module\_library.h}!retrive\_current\_list@{retrive\_current\_list}}
+\index{retrive\_current\_list@{retrive\_current\_list}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{retrive\_current\_list()}
+{\footnotesize\ttfamily struct \textbf{ completion\+\_\+list}$\ast$ retrive\+\_\+current\+\_\+list (\begin{DoxyParamCaption}\item[{struct list\+\_\+head $\ast$}]{sched\+\_\+data,  }\item[{unsigned long int}]{filep }\end{DoxyParamCaption})}
+
+
+
+retive the completion list managed by the current \doxyref{scheduler\+\_\+thread}{p.}{d6/df7/structscheduler__thread} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+data} & pointer to the U\+MS Scheduler global variable that manage all the U\+MS Scheduler \\
+\hline
+{\em filep} & identifier of the file descriptoy ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct completion\+\_\+list$\ast$ on success N\+U\+LL otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 167 of file module\+\_\+library.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/db6/module__library_8h_a8665b5174c1ba093125561797d0287c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{module__library_8h_a19fa8292d88726dc8a30781bc2bef489}} 
+\index{module\_library.h@{module\_library.h}!retrive\_current\_scheduler\_thread@{retrive\_current\_scheduler\_thread}}
+\index{retrive\_current\_scheduler\_thread@{retrive\_current\_scheduler\_thread}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{retrive\_current\_scheduler\_thread()}
+{\footnotesize\ttfamily struct \textbf{ scheduler\+\_\+thread}$\ast$ retrive\+\_\+current\+\_\+scheduler\+\_\+thread (\begin{DoxyParamCaption}\item[{struct list\+\_\+head $\ast$}]{sched\+\_\+data,  }\item[{unsigned long int}]{filep }\end{DoxyParamCaption})}
+
+
+
+Retrive the current \doxyref{scheduler\+\_\+thread}{p.}{d6/df7/structscheduler__thread} structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+data} & pointer to the U\+MS Scheduler global variable that manage all the U\+MS Scheduler \\
+\hline
+{\em filep} & identifier of the file descriptoy ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct scheduler\+\_\+thread$\ast$ on success N\+U\+LL otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 235 of file module\+\_\+library.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/db6/module__library_8h_a19fa8292d88726dc8a30781bc2bef489_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{module__library_8h_a76ba692d081f99ddd3fcccbebdcd14c5}} 
+\index{module\_library.h@{module\_library.h}!retrive\_list@{retrive\_list}}
+\index{retrive\_list@{retrive\_list}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{retrive\_list()}
+{\footnotesize\ttfamily struct \textbf{ completion\+\_\+list}$\ast$ retrive\+\_\+list (\begin{DoxyParamCaption}\item[{struct list\+\_\+head $\ast$}]{comp\+\_\+lists,  }\item[{ums\+\_\+pid\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+Retrive the desired \doxyref{completion\+\_\+list}{p.}{d0/dea/structcompletion__list}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comp\+\_\+lists} & pointer to the U\+MS Scheduler global variable that manage all the completion lists \\
+\hline
+{\em id} & id of the \doxyref{completion\+\_\+list}{p.}{d0/dea/structcompletion__list} choosen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct completion\+\_\+list$\ast$ on success, N\+U\+LL otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 398 of file module\+\_\+library.\+c.
+
+\mbox{\label{module__library_8h_a25ef7a2b5eeb93533996fb3a340fd73c}} 
+\index{module\_library.h@{module\_library.h}!retrive\_worker\_thread@{retrive\_worker\_thread}}
+\index{retrive\_worker\_thread@{retrive\_worker\_thread}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{retrive\_worker\_thread()}
+{\footnotesize\ttfamily struct \textbf{ worker\+\_\+thread}$\ast$ retrive\+\_\+worker\+\_\+thread (\begin{DoxyParamCaption}\item[{struct \textbf{ completion\+\_\+list} $\ast$}]{current\+\_\+list,  }\item[{ums\+\_\+pid\+\_\+t}]{pid }\end{DoxyParamCaption})}
+
+
+
+retrive the desired \doxyref{worker\+\_\+thread}{p.}{dd/d5b/structworker__thread} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+list} & pointer to the scheduler\+\_\+thread-\/$>$\doxyref{completion\+\_\+list}{p.}{d0/dea/structcompletion__list} \\
+\hline
+{\em pid} & id of the \doxyref{worker\+\_\+thread}{p.}{dd/d5b/structworker__thread} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct worker\+\_\+thread$\ast$ on success, N\+U\+LL otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 424 of file module\+\_\+library.\+c.
+
+\mbox{\label{module__library_8h_aa58cb10fe3ce74a2caacfa296e564e14}} 
+\index{module\_library.h@{module\_library.h}!ums\_thread\_yield@{ums\_thread\_yield}}
+\index{ums\_thread\_yield@{ums\_thread\_yield}!module\_library.h@{module\_library.h}}
+\doxysubsubsection{ums\_thread\_yield()}
+{\footnotesize\ttfamily int ums\+\_\+thread\+\_\+yield (\begin{DoxyParamCaption}\item[{struct list\+\_\+head $\ast$}]{sched\+\_\+data,  }\item[{unsigned long int}]{filep,  }\item[{unsigned long}]{arg }\end{DoxyParamCaption})}
+
+
+
+Pause the execution of the current worker and write in (sched\+\_\+thread\+\_\+data$\ast$)arg entry\+\_\+point and args. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+data} & pointer to a U\+MS Scheduler list\+\_\+head who manage this scheduler thread \\
+\hline
+{\em filep} & id of the U\+MS Scheduler \\
+\hline
+{\em arg} & pointer to a user space sched\+\_\+thread\+\_\+data$\ast$ taht will be fill with entry\+\_\+point and $\ast$args \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+errno
+\begin{DoxyItemize}
+\item errno\+:
+\begin{DoxyItemize}
+\item E\+B\+U\+SY, no other workers, this mean that you should just call the E\+X\+I\+T\+\_\+\+F\+R\+O\+M\+\_\+\+Y\+I\+E\+LD
+\item E\+A\+G\+A\+IN, worker found, you have to call the entrypoint before call the E\+X\+I\+T\+\_\+\+F\+R\+O\+M\+\_\+\+Y\+I\+E\+LD 
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line 891 of file module\+\_\+library.\+c.
+

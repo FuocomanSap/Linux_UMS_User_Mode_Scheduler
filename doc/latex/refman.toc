@@ -1,0 +1,186 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}O\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SV Final Project Sources}{1}%
+\contentsline {section}{\numberline {1.1}$<$tt$>$\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Headers/$<$/tt$>$ cointains both header files and libraries for both user and kernel space}{1}%
+\contentsline {section}{\numberline {1.2}$<$tt$>$\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Module/$<$/tt$>$ cointains the code of the L\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}K\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}M and its library}{1}%
+\contentsline {section}{\numberline {1.3}$<$tt$>$./$<$/tt$>$ cointains the test file}{1}%
+\contentsline {chapter}{\numberline {2}Data Structure Index}{3}%
+\contentsline {section}{\numberline {2.1}Data Structures}{3}%
+\contentsline {chapter}{\numberline {3}File Index}{5}%
+\contentsline {section}{\numberline {3.1}File List}{5}%
+\contentsline {chapter}{\numberline {4}Data Structure Documentation}{7}%
+\contentsline {section}{\numberline {4.1}args Struct Reference}{7}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}%
+\contentsline {section}{\numberline {4.2}completion\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}list Struct Reference}{7}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{8}%
+\contentsline {subsection}{\numberline {4.2.2}Field Documentation}{8}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}id}{8}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}list\_lock}{8}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}sem\_counter}{8}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}to\_destroy}{8}%
+\contentsline {subsubsection}{\numberline {4.2.2.5}workers}{9}%
+\contentsline {section}{\numberline {4.3}completion\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}list\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data Struct Reference}{9}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{9}%
+\contentsline {subsection}{\numberline {4.3.2}Field Documentation}{10}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}head}{10}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}id}{10}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}requested\_size}{10}%
+\contentsline {section}{\numberline {4.4}dequeue\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}fast\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}list Struct Reference}{11}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{11}%
+\contentsline {subsection}{\numberline {4.4.2}Field Documentation}{11}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}cur\_size}{11}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}list\_data}{12}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}list\_pointer}{12}%
+\contentsline {subsubsection}{\numberline {4.4.2.4}origin\_size}{12}%
+\contentsline {section}{\numberline {4.5}sched\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}thread\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data Struct Reference}{12}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{13}%
+\contentsline {subsection}{\numberline {4.5.2}Field Documentation}{13}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}args}{13}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}completion\_list}{13}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}entry\_point}{13}%
+\contentsline {section}{\numberline {4.6}scheduler\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}thread Struct Reference}{14}%
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{14}%
+\contentsline {subsection}{\numberline {4.6.2}Field Documentation}{15}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}args}{15}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}currently\_running}{15}%
+\contentsline {subsubsection}{\numberline {4.6.2.3}destroy}{15}%
+\contentsline {subsubsection}{\numberline {4.6.2.4}ended}{15}%
+\contentsline {subsubsection}{\numberline {4.6.2.5}ent}{15}%
+\contentsline {subsubsection}{\numberline {4.6.2.6}ent\_write}{16}%
+\contentsline {subsubsection}{\numberline {4.6.2.7}entry\_point}{16}%
+\contentsline {subsubsection}{\numberline {4.6.2.8}father}{16}%
+\contentsline {subsubsection}{\numberline {4.6.2.9}last\_switch\_time}{16}%
+\contentsline {subsubsection}{\numberline {4.6.2.10}mean\_switch\_time}{16}%
+\contentsline {subsubsection}{\numberline {4.6.2.11}nesting}{17}%
+\contentsline {subsubsection}{\numberline {4.6.2.12}numb\_switch}{17}%
+\contentsline {subsubsection}{\numberline {4.6.2.13}pid}{17}%
+\contentsline {subsubsection}{\numberline {4.6.2.14}started}{17}%
+\contentsline {subsubsection}{\numberline {4.6.2.15}yield\_priority}{17}%
+\contentsline {section}{\numberline {4.7}scheduler\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}thread\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}worker\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lifo Struct Reference}{18}%
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{18}%
+\contentsline {section}{\numberline {4.8}ums\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}device\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{18}%
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{19}%
+\contentsline {section}{\numberline {4.9}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sched\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data Struct Reference}{19}%
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{19}%
+\contentsline {subsection}{\numberline {4.9.2}Field Documentation}{19}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}ent}{19}%
+\contentsline {subsubsection}{\numberline {4.9.2.2}ent\_write}{20}%
+\contentsline {subsubsection}{\numberline {4.9.2.3}father}{20}%
+\contentsline {subsubsection}{\numberline {4.9.2.4}id\_counter}{20}%
+\contentsline {subsubsection}{\numberline {4.9.2.5}owner}{20}%
+\contentsline {subsubsection}{\numberline {4.9.2.6}scheduler\_thread}{20}%
+\contentsline {section}{\numberline {4.10}ums\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}worker\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}thread\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data Struct Reference}{21}%
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{21}%
+\contentsline {subsection}{\numberline {4.10.2}Field Documentation}{21}%
+\contentsline {subsubsection}{\numberline {4.10.2.1}args}{21}%
+\contentsline {subsubsection}{\numberline {4.10.2.2}completion\_list\_id}{22}%
+\contentsline {subsubsection}{\numberline {4.10.2.3}next}{22}%
+\contentsline {subsubsection}{\numberline {4.10.2.4}pid}{22}%
+\contentsline {subsubsection}{\numberline {4.10.2.5}work}{22}%
+\contentsline {section}{\numberline {4.11}worker\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}thread Struct Reference}{22}%
+\contentsline {subsection}{\numberline {4.11.1}Detailed Description}{23}%
+\contentsline {subsection}{\numberline {4.11.2}Field Documentation}{23}%
+\contentsline {subsubsection}{\numberline {4.11.2.1}args}{23}%
+\contentsline {subsubsection}{\numberline {4.11.2.2}completion\_list\_id}{23}%
+\contentsline {subsubsection}{\numberline {4.11.2.3}execute\_lock}{23}%
+\contentsline {subsubsection}{\numberline {4.11.2.4}numb\_switch}{24}%
+\contentsline {subsubsection}{\numberline {4.11.2.5}pid}{24}%
+\contentsline {subsubsection}{\numberline {4.11.2.6}state}{24}%
+\contentsline {subsubsection}{\numberline {4.11.2.7}task\_struct}{24}%
+\contentsline {subsubsection}{\numberline {4.11.2.8}work}{24}%
+\contentsline {chapter}{\numberline {5}File Documentation}{25}%
+\contentsline {section}{\numberline {5.1}Headers/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Common.h File Reference}{25}%
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{26}%
+\contentsline {subsection}{\numberline {5.1.2}Macro Definition Documentation}{26}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}ADD\_WORKER}{26}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}CREATE\_COMP\_LIST}{27}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}DEBUG\_DO\_PPRINTK}{28}%
+\contentsline {subsubsection}{\numberline {5.1.2.4}DEBUG\_DO\_PRINTK}{28}%
+\contentsline {subsubsection}{\numberline {5.1.2.5}DEQUEUE\_SIZE\_REQUEST}{28}%
+\contentsline {subsubsection}{\numberline {5.1.2.6}DEQUEUE\_UMS\_COMPLETION\_LIST\_ITEMS}{29}%
+\contentsline {subsubsection}{\numberline {5.1.2.7}DESTROY\_COMP\_LIST}{29}%
+\contentsline {subsubsection}{\numberline {5.1.2.8}ENTER\_UMS\_SCHEDULING\_MODE}{30}%
+\contentsline {subsubsection}{\numberline {5.1.2.9}ERR\_PPRINTK}{30}%
+\contentsline {subsubsection}{\numberline {5.1.2.10}ERR\_PRINTK}{30}%
+\contentsline {subsubsection}{\numberline {5.1.2.11}EXECUTE\_UMS\_THREAD}{30}%
+\contentsline {subsubsection}{\numberline {5.1.2.12}EXIT\_FROM\_YIELD}{31}%
+\contentsline {subsubsection}{\numberline {5.1.2.13}EXIT\_WORKER\_THREAD}{31}%
+\contentsline {subsubsection}{\numberline {5.1.2.14}NOTIFY\_EXEC\_ERR\_PPRINTK}{32}%
+\contentsline {subsubsection}{\numberline {5.1.2.15}RELEASE\_UMS}{32}%
+\contentsline {subsubsection}{\numberline {5.1.2.16}UMS\_THREAD\_YIELD}{32}%
+\contentsline {section}{\numberline {5.2}Headers/def\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}struct.h File Reference}{33}%
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{35}%
+\contentsline {subsection}{\numberline {5.2.2}Typedef Documentation}{35}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}completion\_list}{35}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}scheduler\_thread}{35}%
+\contentsline {subsubsection}{\numberline {5.2.2.3}scheduler\_thread\_worker\_lifo}{35}%
+\contentsline {subsubsection}{\numberline {5.2.2.4}UMS\_sched\_data}{36}%
+\contentsline {subsubsection}{\numberline {5.2.2.5}worker\_thread}{36}%
+\contentsline {section}{\numberline {5.3}Headers/export\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}proc\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}info.h File Reference}{36}%
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{37}%
+\contentsline {subsection}{\numberline {5.3.2}Function Documentation}{37}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}create\_proc\_ums()}{37}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}create\_proc\_ums\_scheduler()}{38}%
+\contentsline {subsubsection}{\numberline {5.3.2.3}create\_proc\_ums\_scheduler\_thread()}{38}%
+\contentsline {subsubsection}{\numberline {5.3.2.4}create\_proc\_worker()}{39}%
+\contentsline {subsubsection}{\numberline {5.3.2.5}rm\_proc\_ums()}{39}%
+\contentsline {subsubsection}{\numberline {5.3.2.6}rm\_proc\_ums\_scheduler()}{39}%
+\contentsline {subsubsection}{\numberline {5.3.2.7}rm\_proc\_ums\_scheduler\_thread()}{40}%
+\contentsline {subsubsection}{\numberline {5.3.2.8}rm\_proc\_worker()}{40}%
+\contentsline {section}{\numberline {5.4}Headers/ums\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}user\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}library.h File Reference}{41}%
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{42}%
+\contentsline {subsection}{\numberline {5.4.2}Macro Definition Documentation}{42}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}DEBUG\_USER\_DO\_PPRINTF}{43}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}DEBUG\_USER\_DO\_PRINTF}{43}%
+\contentsline {subsubsection}{\numberline {5.4.2.3}ERR\_USER\_EXEC\_PPRINTF}{43}%
+\contentsline {subsubsection}{\numberline {5.4.2.4}ERR\_USER\_EXEC\_PRINTF}{44}%
+\contentsline {subsubsection}{\numberline {5.4.2.5}ERR\_USER\_PPRINTF}{44}%
+\contentsline {subsubsection}{\numberline {5.4.2.6}ERR\_USER\_PRINTF}{44}%
+\contentsline {subsection}{\numberline {5.4.3}Function Documentation}{44}%
+\contentsline {subsubsection}{\numberline {5.4.3.1}add\_worker\_thread()}{44}%
+\contentsline {subsubsection}{\numberline {5.4.3.2}create\_completion\_list()}{45}%
+\contentsline {subsubsection}{\numberline {5.4.3.3}dequeue\_ums\_completion\_list\_items()}{45}%
+\contentsline {subsubsection}{\numberline {5.4.3.4}destroy\_comp\_list()}{46}%
+\contentsline {subsubsection}{\numberline {5.4.3.5}enter\_ums\_scheduling\_mode()}{46}%
+\contentsline {subsubsection}{\numberline {5.4.3.6}execute\_ums\_thread()}{47}%
+\contentsline {subsubsection}{\numberline {5.4.3.7}exit\_worker\_thread()}{47}%
+\contentsline {subsubsection}{\numberline {5.4.3.8}release\_ums()}{48}%
+\contentsline {subsubsection}{\numberline {5.4.3.9}ums\_close()}{48}%
+\contentsline {subsubsection}{\numberline {5.4.3.10}ums\_init()}{49}%
+\contentsline {subsubsection}{\numberline {5.4.3.11}ums\_thread\_yield()}{49}%
+\contentsline {section}{\numberline {5.5}Headers/user\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}struct.h File Reference}{49}%
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{50}%
+\contentsline {subsection}{\numberline {5.5.2}Typedef Documentation}{50}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}completion\_list\_data}{51}%
+\contentsline {subsubsection}{\numberline {5.5.2.2}sched\_thread\_data}{51}%
+\contentsline {subsubsection}{\numberline {5.5.2.3}ums\_worker\_thread\_data}{51}%
+\contentsline {section}{\numberline {5.6}Module/module\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}library.h File Reference}{51}%
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{53}%
+\contentsline {subsection}{\numberline {5.6.2}Function Documentation}{53}%
+\contentsline {subsubsection}{\numberline {5.6.2.1}\_execute\_ums\_thread()}{53}%
+\contentsline {subsubsection}{\numberline {5.6.2.2}\_retrive\_schduler\_thread\_proc()}{54}%
+\contentsline {subsubsection}{\numberline {5.6.2.3}\_retrive\_worker\_thread\_proc()}{54}%
+\contentsline {subsubsection}{\numberline {5.6.2.4}add\_worker()}{55}%
+\contentsline {subsubsection}{\numberline {5.6.2.5}create\_ums\_thread()}{56}%
+\contentsline {subsubsection}{\numberline {5.6.2.6}del\_worker\_thread()}{56}%
+\contentsline {subsubsection}{\numberline {5.6.2.7}dequeue\_size\_request()}{57}%
+\contentsline {subsubsection}{\numberline {5.6.2.8}destoy\_comp\_list\_set\_destroy()}{57}%
+\contentsline {subsubsection}{\numberline {5.6.2.9}enter\_ums\_scheduling\_mode()}{58}%
+\contentsline {subsubsection}{\numberline {5.6.2.10}execute\_ums\_thread()}{58}%
+\contentsline {subsubsection}{\numberline {5.6.2.11}exit\_from\_yield()}{59}%
+\contentsline {subsubsection}{\numberline {5.6.2.12}exit\_worker\_thread()}{59}%
+\contentsline {subsubsection}{\numberline {5.6.2.13}list\_copy\_to\_user()}{60}%
+\contentsline {subsubsection}{\numberline {5.6.2.14}release\_scheduler()}{60}%
+\contentsline {subsubsection}{\numberline {5.6.2.15}retrive\_current\_list()}{61}%
+\contentsline {subsubsection}{\numberline {5.6.2.16}retrive\_current\_scheduler\_thread()}{61}%
+\contentsline {subsubsection}{\numberline {5.6.2.17}retrive\_list()}{62}%
+\contentsline {subsubsection}{\numberline {5.6.2.18}retrive\_worker\_thread()}{63}%
+\contentsline {subsubsection}{\numberline {5.6.2.19}ums\_thread\_yield()}{63}%
+\contentsline {section}{\numberline {5.7}Module/ums.h File Reference}{63}%
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{65}%
+\contentsline {subsection}{\numberline {5.7.2}Function Documentation}{65}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}retrive\_schduler\_thread\_proc()}{65}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}retrive\_worker\_thread\_proc()}{65}%
+\contentsline {subsubsection}{\numberline {5.7.2.3}ums\_dev\_ioctls()}{66}%
+\contentsline {subsubsection}{\numberline {5.7.2.4}ums\_dev\_open()}{67}%
+\contentsline {subsubsection}{\numberline {5.7.2.5}ums\_dev\_release()}{67}%
+\contentsline {chapter}{Index}{69}%

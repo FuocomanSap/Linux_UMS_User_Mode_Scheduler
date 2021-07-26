@@ -1,0 +1,5 @@
+<map id="scheduler_thread" name="scheduler_thread">
+<area shape="rect" id="node1" title="Structure used by an UMS Scheduler to mantain scheduler thread infos, used in ENTER_SCHEDULING_MODE." alt="" coords="70,95,205,121"/>
+<area shape="rect" id="node2" href="$d0/dea/structcompletion__list.html" title="Structure used by an UMS Scheduler to mantain Completion list infos, used in CREATE_COMP_LIST." alt="" coords="5,5,128,32"/>
+<area shape="rect" id="node3" href="$dd/d5b/structworker__thread.html" title="Strucute used by a UMS Scheduler to mantain Worker Thread info, used in ADD_WORKER." alt="" coords="152,5,267,32"/>
+</map>

@@ -1,0 +1,481 @@
+\doxysection{Headers/\+Common.h File Reference}
+\label{Common_8h}\index{Headers/Common.h@{Headers/Common.h}}
+
+
+Contains constants and macros used both by the module and the user library.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d50/Common_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\label{Common_8h_a5f5a2c9450ebc584b4fe743c6b1a280b}} 
+\#define {\bfseries D\+E\+V\+I\+C\+E\+\_\+\+N\+A\+ME}~\char`\"{}ums\+\_\+scheduler\char`\"{}
+\item 
+\mbox{\label{Common_8h_a6bbd677a46247ae44e09282ce4e421c4}} 
+\#define {\bfseries M\+O\+D\+U\+L\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+OG}~\char`\"{}U\+M\+S\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+: \char`\"{}
+\item 
+\mbox{\label{Common_8h_a79f2713d570c7065f61a160134ea765b}} 
+\#define {\bfseries C\+L\+A\+S\+S\+\_\+\+N\+A\+ME}~\char`\"{}ums\+\_\+scheduler\+\_\+class\char`\"{}
+\item 
+\mbox{\label{Common_8h_a4394667692ba50af87ff99bf5ce8c82f}} 
+\#define {\bfseries O\+P\+E\+N\+\_\+\+P\+A\+TH}~\char`\"{}/dev/ums\+\_\+scheduler\char`\"{}
+\item 
+\mbox{\label{Common_8h_a157cf9715213c5ec541d30879773714a}} 
+\#define {\bfseries D\+E\+B\+U\+G\+\_\+\+M\+\_\+\+V\+AR}~0
+\item 
+\#define \textbf{ D\+E\+B\+U\+G\+\_\+\+D\+O\+\_\+\+P\+P\+R\+I\+N\+TK}(fmt, ...)
+\begin{DoxyCompactList}\small\item\em function used by the kernel to print debug msgs \end{DoxyCompactList}\item 
+\#define \textbf{ D\+E\+B\+U\+G\+\_\+\+D\+O\+\_\+\+P\+R\+I\+N\+TK}(fmt)
+\begin{DoxyCompactList}\small\item\em function used by the kernel to print debug msgs \end{DoxyCompactList}\item 
+\#define \textbf{ E\+R\+R\+\_\+\+P\+P\+R\+I\+N\+TK}(fmt, ...)~printk(K\+E\+R\+N\+\_\+\+E\+RR fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+);
+\begin{DoxyCompactList}\small\item\em function used by the kernel to print error msgs \end{DoxyCompactList}\item 
+\#define \textbf{ E\+R\+R\+\_\+\+P\+R\+I\+N\+TK}(fmt)~printk(K\+E\+R\+N\+\_\+\+E\+RR fmt);
+\begin{DoxyCompactList}\small\item\em function used by the kernel to print error msgs \end{DoxyCompactList}\item 
+\mbox{\label{Common_8h_a05ad46b508a7fc889674e047e0bad74c}} 
+\#define {\bfseries N\+O\+T\+I\+F\+Y\+\_\+\+E\+X\+E\+C\+\_\+\+E\+R\+R\+\_\+\+M\+\_\+\+V\+AR}~0
+\item 
+\#define \textbf{ N\+O\+T\+I\+F\+Y\+\_\+\+E\+X\+E\+C\+\_\+\+E\+R\+R\+\_\+\+P\+P\+R\+I\+N\+TK}(fmt, ...)~if(N\+O\+T\+I\+F\+Y\+\_\+\+E\+X\+E\+C\+\_\+\+E\+R\+R\+\_\+\+M\+\_\+\+V\+AR)printk(K\+E\+R\+N\+\_\+\+E\+RR fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+);
+\begin{DoxyCompactList}\small\item\em function used by the kernel to print error\+\_\+exec msgs \end{DoxyCompactList}\item 
+\mbox{\label{Common_8h_a5722109aa6233b75bf41218c9abdca2c}} 
+\#define {\bfseries M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE}~\textquotesingle{}K\textquotesingle{}
+\item 
+\#define \textbf{ E\+N\+T\+E\+R\+\_\+\+U\+M\+S\+\_\+\+S\+C\+H\+E\+D\+U\+L\+I\+N\+G\+\_\+\+M\+O\+DE}~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 0, sizeof(\textbf{ sched\+\_\+thread\+\_\+data}))
+\begin{DoxyCompactList}\small\item\em E\+N\+T\+E\+R\+\_\+\+U\+M\+S\+\_\+\+S\+C\+H\+E\+D\+U\+L\+I\+N\+G\+\_\+\+M\+O\+DE. \end{DoxyCompactList}\item 
+\#define \textbf{ D\+E\+Q\+U\+E\+U\+E\+\_\+\+U\+M\+S\+\_\+\+C\+O\+M\+P\+L\+E\+T\+I\+O\+N\+\_\+\+L\+I\+S\+T\+\_\+\+I\+T\+E\+MS}~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 1, 8UL)
+\begin{DoxyCompactList}\small\item\em D\+E\+Q\+U\+E\+U\+E\+\_\+\+U\+M\+S\+\_\+\+C\+O\+M\+P\+L\+E\+T\+I\+O\+N\+\_\+\+L\+I\+S\+T\+\_\+\+I\+T\+E\+MS. \end{DoxyCompactList}\item 
+\#define \textbf{ E\+X\+E\+C\+U\+T\+E\+\_\+\+U\+M\+S\+\_\+\+T\+H\+R\+E\+AD}~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 2, 8UL)
+\begin{DoxyCompactList}\small\item\em E\+X\+E\+C\+U\+T\+E\+\_\+\+U\+M\+S\+\_\+\+T\+H\+R\+E\+AD. \end{DoxyCompactList}\item 
+\#define \textbf{ U\+M\+S\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+Y\+I\+E\+LD}~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 3, 8UL)
+\begin{DoxyCompactList}\small\item\em U\+M\+S\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+Y\+I\+E\+LD. \end{DoxyCompactList}\item 
+\#define \textbf{ E\+X\+I\+T\+\_\+\+W\+O\+R\+K\+E\+R\+\_\+\+T\+H\+R\+E\+AD}~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 4, 8UL)
+\begin{DoxyCompactList}\small\item\em E\+X\+I\+T\+\_\+\+W\+O\+R\+K\+E\+R\+\_\+\+T\+H\+R\+E\+AD. \end{DoxyCompactList}\item 
+\#define \textbf{ C\+R\+E\+A\+T\+E\+\_\+\+C\+O\+M\+P\+\_\+\+L\+I\+ST}~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 5, 8UL)
+\begin{DoxyCompactList}\small\item\em C\+R\+E\+A\+T\+E\+\_\+\+C\+O\+M\+P\+\_\+\+L\+I\+ST. \end{DoxyCompactList}\item 
+\#define \textbf{ A\+D\+D\+\_\+\+W\+O\+R\+K\+ER}~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 6, 8UL)
+\begin{DoxyCompactList}\small\item\em A\+D\+D\+\_\+\+W\+O\+R\+K\+ER. \end{DoxyCompactList}\item 
+\#define \textbf{ D\+E\+S\+T\+R\+O\+Y\+\_\+\+C\+O\+M\+P\+\_\+\+L\+I\+ST}~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 7, 8UL)
+\begin{DoxyCompactList}\small\item\em D\+E\+S\+T\+R\+O\+Y\+\_\+\+C\+O\+M\+P\+\_\+\+L\+I\+ST. \end{DoxyCompactList}\item 
+\#define \textbf{ R\+E\+L\+E\+A\+S\+E\+\_\+\+U\+MS}~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 8, 8UL)
+\begin{DoxyCompactList}\small\item\em R\+E\+L\+E\+A\+S\+E\+\_\+\+U\+MS. \end{DoxyCompactList}\item 
+\#define \textbf{ D\+E\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+R\+E\+Q\+U\+E\+ST}~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 9, 8UL)
+\begin{DoxyCompactList}\small\item\em D\+E\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+R\+E\+Q\+U\+E\+ST. \end{DoxyCompactList}\item 
+\#define \textbf{ E\+X\+I\+T\+\_\+\+F\+R\+O\+M\+\_\+\+Y\+I\+E\+LD}~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 10, 8UL)
+\begin{DoxyCompactList}\small\item\em E\+X\+I\+T\+\_\+\+F\+R\+O\+M\+\_\+\+Y\+I\+E\+LD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains constants and macros used both by the module and the user library. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{Common_8h_aeb02f98813e83854003748925e86756d}} 
+\index{Common.h@{Common.h}!ADD\_WORKER@{ADD\_WORKER}}
+\index{ADD\_WORKER@{ADD\_WORKER}!Common.h@{Common.h}}
+\doxysubsubsection{ADD\_WORKER}
+{\footnotesize\ttfamily \#define A\+D\+D\+\_\+\+W\+O\+R\+K\+ER~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 6, 8UL)}
+
+
+
+A\+D\+D\+\_\+\+W\+O\+R\+K\+ER. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ums\+\_\+worker\+\_\+thread\+\_\+data$\ast$} & pointer to \doxyref{ums\+\_\+worker\+\_\+thread\+\_\+data}{p.}{d2/d14/structums__worker__thread__data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, err otherwise and errno is setted. \begin{DoxyVerb}    This function takes as input *ums_worker_thread_data
+
+    add the ums_worker_thread_data to the desired completion list
+
+    return 0 on success, err otherwise and errno is setted.
+
+    in the case of readers/writers or publish/subscribe or master/slaves use 2 different completion_list for the two groups of workers
+
+    errno:
+    -EACCES, the completion list is marked to be destroyied.
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+
+
+Definition at line 230 of file Common.\+h.
+
+\mbox{\label{Common_8h_ad49df5309defe7b56fdc05f4d5714a3e}} 
+\index{Common.h@{Common.h}!CREATE\_COMP\_LIST@{CREATE\_COMP\_LIST}}
+\index{CREATE\_COMP\_LIST@{CREATE\_COMP\_LIST}!Common.h@{Common.h}}
+\doxysubsubsection{CREATE\_COMP\_LIST}
+{\footnotesize\ttfamily \#define C\+R\+E\+A\+T\+E\+\_\+\+C\+O\+M\+P\+\_\+\+L\+I\+ST~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 5, 8UL)}
+
+
+
+C\+R\+E\+A\+T\+E\+\_\+\+C\+O\+M\+P\+\_\+\+L\+I\+ST. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em completion\+\_\+list\+\_\+data$\ast$} & pointer to \doxyref{completion\+\_\+list\+\_\+data}{p.}{dd/d32/structcompletion__list__data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, err otherwise and errno is setted
+\end{DoxyReturn}
+this function takes as input $\ast$completion\+\_\+list\+\_\+data
+
+generate a new \doxyref{completion\+\_\+list}{p.}{d0/dea/structcompletion__list}, and store the id in the passed $\ast$completion\+\_\+list\+\_\+data
+
+return 0 on success, err otherwise and errno is setted
+
+errno\+: -\/E\+N\+O\+M\+EM no more space in the kernel 
+
+Definition at line 206 of file Common.\+h.
+
+\mbox{\label{Common_8h_af66adb5da286ff0f4776f0494794f8c3}} 
+\index{Common.h@{Common.h}!DEBUG\_DO\_PPRINTK@{DEBUG\_DO\_PPRINTK}}
+\index{DEBUG\_DO\_PPRINTK@{DEBUG\_DO\_PPRINTK}!Common.h@{Common.h}}
+\doxysubsubsection{DEBUG\_DO\_PPRINTK}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+D\+O\+\_\+\+P\+P\+R\+I\+N\+TK(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (DEBUG\_M\_VAR)                          \(\backslash\)}
+\DoxyCodeLine{    \{                                         \(\backslash\)}
+\DoxyCodeLine{        printk(KERN\_INFO fmt, \#\#\_\_VA\_ARGS\_\_); \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+function used by the kernel to print debug msgs 
+
+
+
+Definition at line 26 of file Common.\+h.
+
+\mbox{\label{Common_8h_a2540f5d8d022f1c8b8a85dd4323af6dc}} 
+\index{Common.h@{Common.h}!DEBUG\_DO\_PRINTK@{DEBUG\_DO\_PRINTK}}
+\index{DEBUG\_DO\_PRINTK@{DEBUG\_DO\_PRINTK}!Common.h@{Common.h}}
+\doxysubsubsection{DEBUG\_DO\_PRINTK}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+D\+O\+\_\+\+P\+R\+I\+N\+TK(\begin{DoxyParamCaption}\item[{}]{fmt }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (DEBUG\_M\_VAR)           \(\backslash\)}
+\DoxyCodeLine{    \{                          \(\backslash\)}
+\DoxyCodeLine{        printk(KERN\_INFO fmt); \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+function used by the kernel to print debug msgs 
+
+
+
+Definition at line 36 of file Common.\+h.
+
+\mbox{\label{Common_8h_adc91d5c429959d67363bee0994a3ac88}} 
+\index{Common.h@{Common.h}!DEQUEUE\_SIZE\_REQUEST@{DEQUEUE\_SIZE\_REQUEST}}
+\index{DEQUEUE\_SIZE\_REQUEST@{DEQUEUE\_SIZE\_REQUEST}!Common.h@{Common.h}}
+\doxysubsubsection{DEQUEUE\_SIZE\_REQUEST}
+{\footnotesize\ttfamily \#define D\+E\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+R\+E\+Q\+U\+E\+ST~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 9, 8UL)}
+
+
+
+D\+E\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+Z\+E\+\_\+\+R\+E\+Q\+U\+E\+ST. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pointer} & to \doxyref{completion\+\_\+list\+\_\+data}{p.}{dd/d32/structcompletion__list__data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, err otherwise and errno is setted
+\end{DoxyReturn}
+\begin{DoxyVerb}    This function return the size to be allocated in user space
+    in order to recive the list of ums_worker_thread_data(user space struct)
+
+    copy to args *completion_list_data with: 
+    -requested_size setted
+\end{DoxyVerb}
+ 
+
+Definition at line 275 of file Common.\+h.
+
+\mbox{\label{Common_8h_a0754e806577b0e85ea93abc00a0a614a}} 
+\index{Common.h@{Common.h}!DEQUEUE\_UMS\_COMPLETION\_LIST\_ITEMS@{DEQUEUE\_UMS\_COMPLETION\_LIST\_ITEMS}}
+\index{DEQUEUE\_UMS\_COMPLETION\_LIST\_ITEMS@{DEQUEUE\_UMS\_COMPLETION\_LIST\_ITEMS}!Common.h@{Common.h}}
+\doxysubsubsection{DEQUEUE\_UMS\_COMPLETION\_LIST\_ITEMS}
+{\footnotesize\ttfamily \#define D\+E\+Q\+U\+E\+U\+E\+\_\+\+U\+M\+S\+\_\+\+C\+O\+M\+P\+L\+E\+T\+I\+O\+N\+\_\+\+L\+I\+S\+T\+\_\+\+I\+T\+E\+MS~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 1, 8UL)}
+
+
+
+D\+E\+Q\+U\+E\+U\+E\+\_\+\+U\+M\+S\+\_\+\+C\+O\+M\+P\+L\+E\+T\+I\+O\+N\+\_\+\+L\+I\+S\+T\+\_\+\+I\+T\+E\+MS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em completion\+\_\+list\+\_\+data$\ast$} & pointer to \doxyref{completion\+\_\+list\+\_\+data}{p.}{dd/d32/structcompletion__list__data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, err otherwise and errno is setted
+\end{DoxyReturn}
+This function read from args $\ast$completion\+\_\+list\+\_\+data
+
+if the completion list is empty(no worker to be executed) the U\+MS scheduler thread will sleep if the completion list is not empty\+: 1)the funciotn will check the max space allowed to be written form completion\+\_\+list\+\_\+\+Data 2)then copy (only the allowed infos) \doxyref{worker\+\_\+thread(kernel structre)}{p.}{dd/d5b/structworker__thread} to each \doxyref{ums\+\_\+worker\+\_\+thread\+\_\+data(user structure)}{p.}{d2/d14/structums__worker__thread__data} entry in \doxyref{completion\+\_\+list\+\_\+data}{p.}{dd/d32/structcompletion__list__data} if no more space or no more worker the function exits return 0 on succedd, err otherwise errno wil be set errno\+:
+\begin{DoxyItemize}
+\item 404\+: the U\+MS called the U\+M\+S\+\_\+\+R\+E\+L\+E\+A\+SE, this pthread should stop calling the device we suggest to return 0(see \doxyref{ums\+\_\+user\+\_\+library.\+c}{p.}{da/d2f/ums__user__library_8c_source} example) 
+\end{DoxyItemize}
+
+Definition at line 109 of file Common.\+h.
+
+\mbox{\label{Common_8h_a954fcc3abf68193f50be1a673d4326df}} 
+\index{Common.h@{Common.h}!DESTROY\_COMP\_LIST@{DESTROY\_COMP\_LIST}}
+\index{DESTROY\_COMP\_LIST@{DESTROY\_COMP\_LIST}!Common.h@{Common.h}}
+\doxysubsubsection{DESTROY\_COMP\_LIST}
+{\footnotesize\ttfamily \#define D\+E\+S\+T\+R\+O\+Y\+\_\+\+C\+O\+M\+P\+\_\+\+L\+I\+ST~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 7, 8UL)}
+
+
+
+D\+E\+S\+T\+R\+O\+Y\+\_\+\+C\+O\+M\+P\+\_\+\+L\+I\+ST. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em completion\+\_\+list\+\_\+data$\ast$} & pointer to a \doxyref{completion\+\_\+list\+\_\+data}{p.}{dd/d32/structcompletion__list__data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, err otherwise and errno is setted. \begin{DoxyVerb}    DESTROY_COMP_LIST
+    takes as input a *completion_list_data
+    this function simply mark the completion_list to destroy
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+
+
+Definition at line 245 of file Common.\+h.
+
+\mbox{\label{Common_8h_ab0c1090bda23966a92273aa9eacd3d94}} 
+\index{Common.h@{Common.h}!ENTER\_UMS\_SCHEDULING\_MODE@{ENTER\_UMS\_SCHEDULING\_MODE}}
+\index{ENTER\_UMS\_SCHEDULING\_MODE@{ENTER\_UMS\_SCHEDULING\_MODE}!Common.h@{Common.h}}
+\doxysubsubsection{ENTER\_UMS\_SCHEDULING\_MODE}
+{\footnotesize\ttfamily \#define E\+N\+T\+E\+R\+\_\+\+U\+M\+S\+\_\+\+S\+C\+H\+E\+D\+U\+L\+I\+N\+G\+\_\+\+M\+O\+DE~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 0, sizeof(\textbf{ sched\+\_\+thread\+\_\+data}))}
+
+
+
+E\+N\+T\+E\+R\+\_\+\+U\+M\+S\+\_\+\+S\+C\+H\+E\+D\+U\+L\+I\+N\+G\+\_\+\+M\+O\+DE. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+thread\+\_\+data$\ast$} & pointer to \doxyref{sched\+\_\+thread\+\_\+data}{p.}{d8/d00/structsched__thread__data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, err otherwise and errno is setted \begin{DoxyVerb}    reads from args *sched_thread_data with: 
+    -entrypoint 
+    -args(for the entry point)
+    -the completion list id
+
+    Then call create_ums_thread.
+
+    returns 0 on success, err otherwise, the errno is setted
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file Common.\+h.
+
+\mbox{\label{Common_8h_a3a6f32275180ba2f64929d06624c12f8}} 
+\index{Common.h@{Common.h}!ERR\_PPRINTK@{ERR\_PPRINTK}}
+\index{ERR\_PPRINTK@{ERR\_PPRINTK}!Common.h@{Common.h}}
+\doxysubsubsection{ERR\_PPRINTK}
+{\footnotesize\ttfamily \#define E\+R\+R\+\_\+\+P\+P\+R\+I\+N\+TK(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~printk(K\+E\+R\+N\+\_\+\+E\+RR fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+);}
+
+
+
+function used by the kernel to print error msgs 
+
+
+
+Definition at line 46 of file Common.\+h.
+
+\mbox{\label{Common_8h_af2b47dc92b4b0de3c22912685f0c1e7e}} 
+\index{Common.h@{Common.h}!ERR\_PRINTK@{ERR\_PRINTK}}
+\index{ERR\_PRINTK@{ERR\_PRINTK}!Common.h@{Common.h}}
+\doxysubsubsection{ERR\_PRINTK}
+{\footnotesize\ttfamily \#define E\+R\+R\+\_\+\+P\+R\+I\+N\+TK(\begin{DoxyParamCaption}\item[{}]{fmt }\end{DoxyParamCaption})~printk(K\+E\+R\+N\+\_\+\+E\+RR fmt);}
+
+
+
+function used by the kernel to print error msgs 
+
+
+
+Definition at line 51 of file Common.\+h.
+
+\mbox{\label{Common_8h_ab9339333a1f0be0e2a7795dbf870838a}} 
+\index{Common.h@{Common.h}!EXECUTE\_UMS\_THREAD@{EXECUTE\_UMS\_THREAD}}
+\index{EXECUTE\_UMS\_THREAD@{EXECUTE\_UMS\_THREAD}!Common.h@{Common.h}}
+\doxysubsubsection{EXECUTE\_UMS\_THREAD}
+{\footnotesize\ttfamily \#define E\+X\+E\+C\+U\+T\+E\+\_\+\+U\+M\+S\+\_\+\+T\+H\+R\+E\+AD~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 2, 8UL)}
+
+
+
+E\+X\+E\+C\+U\+T\+E\+\_\+\+U\+M\+S\+\_\+\+T\+H\+R\+E\+AD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ums\+\_\+worker\+\_\+thread\+\_\+data$\ast$} & pointer to \doxyref{ums\+\_\+worker\+\_\+thread\+\_\+data}{p.}{d2/d14/structums__worker__thread__data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, err otherwise and errno is setted
+\end{DoxyReturn}
+\begin{DoxyVerb}    called from a scheduler thread, it executes the passed worker thread by switching the entire context
+
+    this function takes as input a *ums_worker_thread_data
+    if the worker is not RUNNABLE or not exists the function exits
+    otherwise set all the information in the current scheduler and then return ums_worker_thread_data filled 
+    with at least *work and *args
+    The worker will be set to RUNNING
+
+    errno:
+    - EFBIG, no more space in kernel to allow a new scheduler_thread_worker_lifo
+    - EBADF, worker not found
+    - EACCES, the worker is not RUNNABLE
+     with one of this errno the default operation is to try to execute the next worker;
+\end{DoxyVerb}
+ 
+
+Definition at line 136 of file Common.\+h.
+
+\mbox{\label{Common_8h_a9ff0176780c1b60ceb00fc08fb98d59c}} 
+\index{Common.h@{Common.h}!EXIT\_FROM\_YIELD@{EXIT\_FROM\_YIELD}}
+\index{EXIT\_FROM\_YIELD@{EXIT\_FROM\_YIELD}!Common.h@{Common.h}}
+\doxysubsubsection{EXIT\_FROM\_YIELD}
+{\footnotesize\ttfamily \#define E\+X\+I\+T\+\_\+\+F\+R\+O\+M\+\_\+\+Y\+I\+E\+LD~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 10, 8UL)}
+
+
+
+E\+X\+I\+T\+\_\+\+F\+R\+O\+M\+\_\+\+Y\+I\+E\+LD. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, err otherwise and errno is setted \begin{DoxyVerb}    This is a helper function, should be called after an UMS_THREAD_YIELD
+    this simply decrement a yield counter in the scheduler
+    not calling this function will have no consequences on the exectuion
+    but scheudler infos will be messed up, so that RELEASE will fails when call 
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+
+
+Definition at line 288 of file Common.\+h.
+
+\mbox{\label{Common_8h_accc6ae55e81bb4fb87efa154bcbfc6bc}} 
+\index{Common.h@{Common.h}!EXIT\_WORKER\_THREAD@{EXIT\_WORKER\_THREAD}}
+\index{EXIT\_WORKER\_THREAD@{EXIT\_WORKER\_THREAD}!Common.h@{Common.h}}
+\doxysubsubsection{EXIT\_WORKER\_THREAD}
+{\footnotesize\ttfamily \#define E\+X\+I\+T\+\_\+\+W\+O\+R\+K\+E\+R\+\_\+\+T\+H\+R\+E\+AD~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 4, 8UL)}
+
+
+
+E\+X\+I\+T\+\_\+\+W\+O\+R\+K\+E\+R\+\_\+\+T\+H\+R\+E\+AD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+thread\+\_\+data$\ast$} & pointer to \doxyref{sched\+\_\+thread\+\_\+data}{p.}{d8/d00/structsched__thread__data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, err otherwise and errno is setted \begin{DoxyVerb}    This functions must be called at the end of a worker_thread *work function.
+    This function takes as input *sched_thread_data
+
+    Then the worker will be set to EXIT, and rmeoved from:
+    the completion_list and from the list of the UMS scheduler thread.
+
+
+
+    at the end like the execute pass sched_thread_data to the user filled with entry_point and args
+
+    errno:
+    - EBUSY, no other worker to execute, but you come from a UMS_THREAD_YIELD, 
+             you have simply to return 0 from the current function;
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+
+
+Definition at line 184 of file Common.\+h.
+
+\mbox{\label{Common_8h_ab5662cd096de1ef3b8b96f8fc72d3a6c}} 
+\index{Common.h@{Common.h}!NOTIFY\_EXEC\_ERR\_PPRINTK@{NOTIFY\_EXEC\_ERR\_PPRINTK}}
+\index{NOTIFY\_EXEC\_ERR\_PPRINTK@{NOTIFY\_EXEC\_ERR\_PPRINTK}!Common.h@{Common.h}}
+\doxysubsubsection{NOTIFY\_EXEC\_ERR\_PPRINTK}
+{\footnotesize\ttfamily \#define N\+O\+T\+I\+F\+Y\+\_\+\+E\+X\+E\+C\+\_\+\+E\+R\+R\+\_\+\+P\+P\+R\+I\+N\+TK(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})~if(N\+O\+T\+I\+F\+Y\+\_\+\+E\+X\+E\+C\+\_\+\+E\+R\+R\+\_\+\+M\+\_\+\+V\+AR)printk(K\+E\+R\+N\+\_\+\+E\+RR fmt, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+);}
+
+
+
+function used by the kernel to print error\+\_\+exec msgs 
+
+
+
+Definition at line 58 of file Common.\+h.
+
+\mbox{\label{Common_8h_af957a1b7686ce516e27a1cf30684fc42}} 
+\index{Common.h@{Common.h}!RELEASE\_UMS@{RELEASE\_UMS}}
+\index{RELEASE\_UMS@{RELEASE\_UMS}!Common.h@{Common.h}}
+\doxysubsubsection{RELEASE\_UMS}
+{\footnotesize\ttfamily \#define R\+E\+L\+E\+A\+S\+E\+\_\+\+U\+MS~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 8, 8UL)}
+
+
+
+R\+E\+L\+E\+A\+S\+E\+\_\+\+U\+MS. 
+
+\begin{DoxyReturn}{Returns}
+0 on success, err otherwise and errno is setted. R\+E\+L\+E\+A\+S\+E\+\_\+\+U\+MS
+\end{DoxyReturn}
+this funciton simply relelase the current U\+MS Scheduler 
+
+Definition at line 259 of file Common.\+h.
+
+\mbox{\label{Common_8h_a3be283178f7ac488dbe795e32c8d6758}} 
+\index{Common.h@{Common.h}!UMS\_THREAD\_YIELD@{UMS\_THREAD\_YIELD}}
+\index{UMS\_THREAD\_YIELD@{UMS\_THREAD\_YIELD}!Common.h@{Common.h}}
+\doxysubsubsection{UMS\_THREAD\_YIELD}
+{\footnotesize\ttfamily \#define U\+M\+S\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+Y\+I\+E\+LD~\+\_\+\+I\+OC(\+\_\+\+I\+O\+C\+\_\+\+W\+R\+I\+TE $\vert$ \+\_\+\+I\+O\+C\+\_\+\+R\+E\+AD, M\+A\+G\+I\+C\+\_\+\+K\+\_\+\+V\+A\+L\+UE, 3, 8UL)}
+
+
+
+U\+M\+S\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+Y\+I\+E\+LD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched\+\_\+thread\+\_\+data$\ast$} & pointer to \doxyref{sched\+\_\+thread\+\_\+data}{p.}{d8/d00/structsched__thread__data} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+err and errno is setted
+\end{DoxyReturn}
+\begin{DoxyVerb}    UMS_THREAD_YIELD
+
+   called from a worker thread, it pauses the execution of the current thread and the UMS scheduler entry point is executed for determining the next thread to be scheduled;
+
+    Takes as input *sched_thread_data and fill it with *entry_point and *args
+    The worker will be set to YIELD
+
+    * errno:
+    - EBUSY, no other workers, this mean that you should just call the EXIT_FROM_YIELD
+    - EAGAIN, worker found, you have to call the entrypoint before call the EXIT_FROM_YIELD
+\end{DoxyVerb}
+ 
+
+Definition at line 159 of file Common.\+h.
+

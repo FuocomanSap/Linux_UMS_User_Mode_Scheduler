@@ -1,0 +1,5 @@
+<map id="dequeue_fast_list" name="dequeue_fast_list">
+<area shape="rect" id="node1" title="Struct used by a UMS Scheduler thread to mantain a pre&#45;allocated completion_list_data* used in the de..." alt="" coords="30,184,167,211"/>
+<area shape="rect" id="node2" href="$d2/d14/structums__worker__thread__data.html" title="Struct used to share ums_worker_thread_data infos with the kernel." alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node3" href="$dd/d32/structcompletion__list__data.html" title="Struct used to share completion_list_data info with the kernel." alt="" coords="179,95,338,121"/>
+</map>

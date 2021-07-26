@@ -1,0 +1,4 @@
+<map id="exit_from_yield" name="exit_from_yield">
+<area shape="rect" id="node1" title="This function update the running time of thw worker and decrement the nesting variable." alt="" coords="5,13,129,39"/>
+<area shape="rect" id="node2" href="$d9/db6/module__library_8h.html#a19fa8292d88726dc8a30781bc2bef489" title="Retrive the current scheduler_thread structure." alt="" coords="177,5,365,47"/>
+</map>
