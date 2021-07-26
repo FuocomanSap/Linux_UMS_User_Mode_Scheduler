@@ -1,8 +1,0 @@
-<map id="Module/module_library.h" name="Module/module_library.h">
-<area shape="rect" id="node1" title="Contains the helper functions called from the UMS device." alt="" coords="143,5,326,32"/>
-<area shape="rect" id="node2" href="$d0/d0c/ums_8h.html" title="Contains the functions to interact from user space with the kernel module." alt="" coords="5,80,120,107"/>
-<area shape="rect" id="node6" href="$d4/ddd/module__library_8c_source.html" title=" " alt="" coords="144,80,325,107"/>
-<area shape="rect" id="node3" href="$d8/db1/export__proc__info_8h.html" title="This file containts, macros and functions used to manage the /proc files." alt="" coords="213,155,371,196"/>
-<area shape="rect" id="node5" href="$de/d3c/ums_8c_source.html" title=" " alt="" coords="6,162,119,189"/>
-<area shape="rect" id="node4" href="$de/d2a/export__proc__info_8c_source.html" title=" " alt="" coords="213,244,371,285"/>
-</map>

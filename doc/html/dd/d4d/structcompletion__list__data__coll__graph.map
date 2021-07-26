@@ -1,4 +1,0 @@
-<map id="completion_list_data" name="completion_list_data">
-<area shape="rect" id="node1" title="Struct used to share completion_list_data info with the kernel." alt="" coords="19,95,178,121"/>
-<area shape="rect" id="node2" href="$d2/d14/structums__worker__thread__data.html" title="Struct used to share ums_worker_thread_data infos with the kernel." alt="" coords="5,5,192,32"/>
-</map>
