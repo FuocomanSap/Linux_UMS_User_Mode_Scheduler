@@ -13,6 +13,7 @@ The author(s) of this project is/are: Daniele De Turris (1919828), Francesco Dou
   * 5)from the pthread call the enter_ums_scheduling_mode
 
 for more infos on how to use it look at final_project_track.pdf 
+
 for technical infos look at report report_AOSV.pdf
 
 ###Documentation
