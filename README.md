@@ -6,11 +6,11 @@ _A.Y. 2020/2021_
 The author(s) of this project is/are: Daniele De Turris (1919828), Francesco Douglas Scotti di Vigoleno (1743635) 
 
 ### Basic instructions
-1)create a UMS Scheduler
-2)create a completion list
-3)add worker to the completion list
-4)create N pthread
-5)from the pthread call the enter_ums_scheduling_mode
+*1)create a UMS Scheduler
+*2)create a completion list
+*3)add worker to the completion list
+*4)create N pthread
+*5)from the pthread call the enter_ums_scheduling_mode
 
 for more infos look at final_project_track.pdf
 
