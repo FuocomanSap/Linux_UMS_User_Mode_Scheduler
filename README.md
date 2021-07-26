@@ -16,6 +16,13 @@ for more infos on how to use it look at final_project_track.pdf
 
 for technical infos look at report report_AOSV.pdf
 
+### How to test:
+* 1) compile the test.c /src/makefile
+* 2) compile the module /src/Module/makefile
+* 3)run the module (./mount)
+* 4)run the test (./test.c) 
+
+
 ###Documentation
 You can find the docs in the doc folder(generated with doxygen, html is the best choise to navigate)
 
